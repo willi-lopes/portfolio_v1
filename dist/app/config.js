@@ -1,6 +1,6 @@
 var config = {
     salvarDados: true,
-    debug: true,
+    debug: false,
     waterMark: false,
     language: 'pt-br',
     video: 'default',

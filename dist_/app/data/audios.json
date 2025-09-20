@@ -1,0 +1,27 @@
+[
+	{
+		"pt-br": {
+			"audio01": {
+				"src": "../../assets/audio/audio-example.mp3",
+                "class": "",
+                "ariaLabel": "Audio PT"
+			}
+		},
+
+		"en-us": {
+			"audio01": {
+				"src": "../../assets/audio/audio-example.mp3",
+                "class": "",
+                "ariaLabel": "Audio EN"
+			}
+		},
+
+		"es": {
+			"audio01": {
+				"src": "../../assets/audio/audio-example.mp3",
+                "class": "",
+                "ariaLabel": "Audio ES"
+			}
+		}
+	}
+]

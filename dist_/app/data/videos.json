@@ -1,0 +1,27 @@
+[
+	{
+		"pt-br": {
+			"video01": {
+				"src": "../../assets/videos/tela01.mp4",
+                "class": "",
+                "ariaLabel": "Video PT"
+			}
+		},
+
+		"en-us": {
+			"video01": {
+				"src": "../../assets/videos/teste.mp4",
+                "class": "",
+                "ariaLabel": "Video EN"
+			}
+		},
+
+		"es": {
+			"video01": {
+				"src": "../../assets/videos/tela01.mp4",
+                "class": "",
+                "ariaLabel": "Video ES"
+			}
+		}
+	}
+]
