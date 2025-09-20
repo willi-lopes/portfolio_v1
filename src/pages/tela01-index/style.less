@@ -1,0 +1,72 @@
+@import "../../../flamboyant_modules/templates/import.less";
+
+
+
+
+.line_blue{
+    border: 2px solid;
+    border-color: @color-01;
+    margin: 3rem;
+    border-radius: 2rem;
+    border-style: dashed;
+    padding: 2rem;
+        @media (max-width: @tablet) {
+            margin: 2rem;
+            padding: 0rem;
+}
+}
+
+.reverse{
+    @media (max-width: @tablet) {
+        flex-direction: column-reverse;
+}
+    
+}
+
+.center-left{
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+        @media (max-width: @tablet) {
+        justify-content: center;
+        padding-top: 1rem;
+    }
+}
+
+
+.txt-center{
+    @media (max-width: @tablet) {
+        text-align: center !important;
+}
+
+    
+}
+.txt-center2{
+    text-align: right;
+    @media (max-width: @tablet) {
+        text-align: center !important;
+}
+
+    
+}
+
+.container-line .line-minor .container-image img {
+    -o-object-fit: cover;
+    object-fit: contain;
+}
+
+.container-line .line-major {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.prop-flex-justify-start {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+
+
+

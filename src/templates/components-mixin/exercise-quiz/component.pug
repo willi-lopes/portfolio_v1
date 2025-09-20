@@ -1,0 +1,52 @@
+mixin exercise-quiz(template)
+  - acessib_acessib_count = 1;
+  .container-exercise-quiz.container-exercise-base( id!=template.id,
+                            class!=template.class,
+                            repeat!=template.repeat,
+                            cache!=template.cache,
+                            random!=template.random,
+                            peso!=template.peso,
+                            direct!=template.direct,
+                            standardBtn!=template.confirmTxt,
+                            repeatBtn!=template.refazerTxt,
+                            cacheBtn!=template.reverTxt )
+    .container-question
+      .main
+        .wrapper-altervatives
+          each alternative, indice in template.main.alternatives
+
+            - var style_bg = ''
+            if(alternative.content)
+              each elem in alternative.content
+                if (elem.type == "background")
+                  - var col_bg_url = '../../assets/img/' + elem.resource.src;
+                  - style_bg = `background-image: url(${col_bg_url});`;
+
+            button.container-alternative(
+              tabindex=acessib_count++,
+              style!=style_bg,
+              class!=alternative.class,
+              status-alternative!=alternative.status,
+              peso-alternative!=alternative.peso
+              alt-ind=indice
+            )&attributes((alternative.attr) ? alternative.attr : '')
+              if(alternative.selector)
+                .selector
+                  span!=alternative.selector
+
+              if(alternative.text)
+                p.text!=alternative.text
+
+              if(alternative.content)
+                +control-elements(alternative.content)
+
+      .footer
+        .container-btn.wrapper-button
+          button.botao.hide.button-confirm(
+            tabindex=acessib_count++,
+            class!=template.confirmClass
+          )&attributes((template.confirmAttr) ? template.confirmAttr : '')
+            .txtBtn.txtConfirm!=template.confirmTxt
+            .txtBtn.txtRepeat!=template.refazerTxt
+            .txtBtn.txtCache!=template.reverTxt
+      block

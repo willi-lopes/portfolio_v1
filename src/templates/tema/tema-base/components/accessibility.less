@@ -1,0 +1,88 @@
+//Acessibilidade lib
+
+._access-icon {
+    &.material-icons {
+        &._access {
+            &.circular {
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.st0 {
+    fill: @color-02 !important;
+}
+
+._access-icon.circular {
+	left: 1rem !important;
+	right: auto !important;
+	top: 1rem !important;
+	bottom: auto !important;
+}
+
+._access-icon {
+    width: 4rem !important;
+    height: 4rem !important;
+    font-size: 1.4em !important;
+    line-height: 0 !important;
+    text-indent: 0 !important;
+    background-color: @color-02 !important;
+    color: @color-white !important;
+    // left: 0.5em!important;
+    // top: 0.2em!important;
+    top: -91% !important;
+    right: -94% !important;
+    z-index: 9999;
+    opacity: 1;
+    // REMOVENDO FERRAMENTAS DE BAIXA VISÃO.
+    // ADICIONANDO FERRAMENTAS DE BAIXA VISÃO.
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: none !important;
+    border-radius: 0 !important;
+    &::before{
+        position: relative;
+        content: '';
+        width: 80%;
+        height: 80%;
+        background:url('../../assets/img/acessibility.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    @media screen and (max-width: @tablet) {
+        display: none !important;
+    }
+}
+
+._access-menu {
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    position: fixed !important;
+    width: 25vw !important;
+    height: 100vh !important;
+    transition-duration: .5s;
+    z-index: 99991;
+    opacity: 1;
+    background-color: @color-02 !important;
+    color: @color-black;
+    border-radius: 0 !important;
+    border: none;
+    font-family: "Arial" !important;
+    min-width: 300px;
+    box-shadow: 0px 0px 2rem @color-black;
+    max-height: 100vh;
+}
+
+._access-menu ul li {
+    font-size: 28px !important;
+    margin-top: 20px!important;
+}
+._menu-btn {
+    color: #FFF !important;
+}

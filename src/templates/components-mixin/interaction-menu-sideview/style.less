@@ -1,0 +1,181 @@
+.component-menu-sideview{
+  position: relative;
+
+
+  .sidebarMenu {
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      width: 25rem;
+      margin-top: 0;
+      z-index: 9999;
+      transform: translateX(-25rem);
+      transition: transform 250ms ease-in-out;
+      background: blue;
+      overflow-y: auto;
+
+      @media (max-width: @tablet) {
+        width: 90vw;
+      }
+
+      ul,li, a,  button{
+        text-decoration: none;
+        border: 0;
+        padding: 0;
+      }
+
+
+      .closeMenuBtn{
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+
+
+      .sidebarMenuInner{
+        margin:0;
+        padding:0;
+        overflow-y: auto;
+
+        .dropdown {
+
+          [data-toggle="dropdown"] {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items:center;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+
+            .icon-arrow {
+              position: relative;
+              color: #fff;
+
+              &.open-side {
+                &::before {
+                  content: '\2212';
+                  font-size: 1.5rem;
+                }
+              }
+
+              &.close-side {
+                &::before {
+                  content: '\002B';
+                  font-size: 1.5rem;
+                }
+              }
+
+              &::before {
+                content: '\002B';
+                font-size: 1.5rem;
+              }
+            }
+
+          }
+
+          [data-toggle="dropdown"].active,
+          [data-toggle="dropdown"]:hover {
+            color: yellow;
+
+            .icon-arrow {
+              color: yellow;
+            }
+          }
+
+
+
+
+          .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+              padding: 0;
+
+              a {
+                display: block;
+                padding: 0.5rem 0.2rem 0.5rem 2rem;
+                color: #fff;
+                cursor: pointer;
+
+                &::before {
+                  position:relative;
+                  content: '\00a0 ';
+                  font-size: 1.5rem;
+                }
+
+                &.active,
+                &:hover {
+                  color: yellow;
+
+                  &::before {
+                    position:relative;
+                    content: '| ';
+                    font-size: 1.5rem;
+                  }
+
+                }
+              }
+            }
+
+          }
+
+          .show-side, .hide-side {
+            transform-origin: 50% 0%;
+          }
+
+          .show-side {
+            display: block;
+            max-height: 9999px;
+            transform: scaleY(1);
+            animation: showAnimation 0.2s ease;
+            transition: all 0.2s ease;
+          }
+          .hide-side {
+            max-height: 0;
+            transform: scaleY(0);
+            animation: hideAnimation 0.1s ease;
+            transition: all 0.1s ease;
+          }
+        }
+      }
+  }
+
+  &[sideview-status="off"] {
+    .sidebarMenu {
+      transform: translateX(-25rem);
+
+      @media (max-width: @tablet) {
+        transform: translateX(-90vw);
+      }
+    }
+  }
+  &[sideview-status="on"] {
+    .sidebarMenu {
+      transform: translateX(0);
+    }
+  }
+}
+
+
+@keyframes showAnimation {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes hideAnimation {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}

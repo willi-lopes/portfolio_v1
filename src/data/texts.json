@@ -1,0 +1,15 @@
+[
+	{
+		"pt-br": {
+			"texto01": "Olá, tudo bem?"
+		},
+
+		"en-us": {
+			"texto01": "Hello, how are you?"
+		},
+
+		"es": {
+			"texto01": "¿Hola, como estás?"
+		}
+	}
+]

@@ -1,0 +1,57 @@
+html,body{
+    scroll-behavior: smooth;
+    scroll-padding-top:3rem;
+    @media (max-width: @tablet) {
+        scroll-padding-top:4rem;
+    }
+}
+
+.component-template-header {
+    background-color: @color-white !important;
+    // height: auto;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,.5);
+    @media (max-width: @tablet) {
+        padding: 1rem;
+    }
+    .container-image {
+        width: fit-content;
+    }
+
+    label {
+        color: @color-01;
+        font-weight: bold;
+    }
+
+    .container-menu-list {
+        @media (max-width: @tablet) {
+            background-color: @color-black;
+            padding: 2rem;
+        }
+        button,
+        a {
+            text-decoration: none;
+            color: @color-01;
+            font-weight: bold;
+            padding: 0 0 0 3rem;
+            font-size: @font-05;
+            &:first-child {
+                padding: 0;
+            }
+            &::after {
+                @media (max-width: @tablet) {
+                    content: "";
+                    display: block;
+                    border-bottom: 0.2rem dashed @color-01;
+                    margin: 1rem 0;
+                }
+            }
+            @media (max-width: @tablet) {
+                padding: 0;
+                width: 100% !important;
+                font-weight: 300;
+                text-align: left;
+            }
+        }
+    }
+}

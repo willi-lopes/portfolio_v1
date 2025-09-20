@@ -1,0 +1,31 @@
+.container-progress-bar {
+	.bar .progress {
+		background-color: @color-02 !important;
+	}
+
+	.bar:after {
+		background-color: @color-04 !important;
+		border-color: @color-04 !important;
+	}
+
+  @media screen and (max-width: @tablet) {
+    display: none!important;
+  }
+}
+
+
+.wrapper-progress-bar {
+	position: absolute;
+	margin-top: 3em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 97%;
+	max-width: 720px;
+	margin: auto;
+
+	@media screen and (max-width: @tablet) {
+		margin-top: 3em;
+		bottom: 0;
+	}
+}

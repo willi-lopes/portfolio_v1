@@ -1,0 +1,40 @@
+mixin generateCells(infoRow, infoCol)
+	- var rows = infoRow.rowData;
+	- var cols = infoCol.colData;
+
+	.grid-puzzles
+		.boxRow
+			.title
+				p!=infoRow.rowTitle
+			.flexItens
+				each row, rowIndex in rows
+					.item
+						p!= row
+		.boxCol
+			.title
+				p!=infoCol.colTitle
+			.flexItens
+				each col, colIndex in cols
+					.item
+						p!= col.value
+		.boxClick
+			each row in Array.from({ length: rows.length }, (_, index) => index)
+				.row(data-row=rows[row])
+					each col in Array.from({ length: cols.length }, (_, index) => index)
+						.cell(data-col=cols[col].value data-res=cols[col].res data-row=rows[row])
+
+mixin exercise-grid-puzzles(template)
+	- acessib_count = 1;
+	.exercise-grid-puzzles.container-exercise-base(id!=template.id,
+											class!=template.class,
+											feedmodal!=template.feedmodal,
+											)
+		.boxgrid
+			each item, index in template.cells
+				+generateCells( item[0], item[1] )
+		.flexButtons
+			button.btn-responder.hide
+				p Verificar Resposta
+			button.btn-limpar
+				p Limpar
+		block

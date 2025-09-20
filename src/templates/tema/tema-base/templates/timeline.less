@@ -1,0 +1,32 @@
+.container-template-timeline {
+    .cont-itens {
+        height: 20rem;
+        @media (max-width: @tablet) {
+            margin-top: 2rem;
+            height: auto !important;
+        }
+        .cont-item {
+            @media (max-width: @tablet) {
+                height: 15rem;
+            }
+            .container-text {
+                align-items: center !important;
+            }
+
+            .linha {
+                &::before {
+                    background-color: @color-02 !important;
+                    border: solid 0.25rem @color-01;
+                }
+            }
+
+            .container-image {
+                align-items: center !important;
+                img {
+                    height: 80%;
+                    max-height: 10rem;
+                }
+            }
+        }
+    }
+}

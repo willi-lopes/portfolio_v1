@@ -1,0 +1,255 @@
+extends ../../templates/page/page-base.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    body(prev-hide, next-hide, header-hide)
+        .bg_01
+        .onePage 
+
+            section.sec01.bg_02
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+
+                    columns:[
+
+                        {
+                            type: 'wide',
+                            col:[
+                                {
+                                    type: 'class',
+                                    resource: ''
+                                },
+
+                                                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'bg_titulo.png',
+                                    class: ' media_01',
+                                    alt: ''
+                                  }
+                                },
+
+
+                            ]
+                        },
+
+                    ]
+                })
+
+            section.sec02
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+                                {
+                                  type: 'title',
+                                  resource: {
+                                    content: 'Motion Design & Animação',
+                                    class: 'color-01'
+                                  }
+                                },
+
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: '',
+                                    src: 'risca_01.png',
+                                    class: 'prop-w-porc40 prop-tablet-w-porc90',
+                                    alt: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: '20 anos criando narrativas em movimento: projetos que unem técnica e storytelling, desde campanhas e vídeos (dos mais simples aos complexos) até conteúdos educativos diversificados.',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Abaixo, alguns exemplos dessas produções.',
+                                    class: ''
+                                  }
+                                },
+
+                                {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: 'util-image-center',
+                                        src: 'risco_02.png',
+                                        class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                        alt: ''
+                                    }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Os dois vídeos abaixo foram produzidos para uma parceria entre o <b>Itaú Social</b> e o <b>Conviva Educação</b>, como parte do relançamento do portal.',
+                                    class: ' prop-txt-center'
+                                  }
+                                },
+                                                                {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/H_o3ekLBrzQ?si=81F9-sOlKUeNkEl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+                                                                                                {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u0ZYQeMCEbE?si=4LTzrl_j6_E1iPYp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+                                {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: 'util-image-center',
+                                        src: 'risco_02.png',
+                                        class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                        alt: ''
+                                    }
+                                },
+                                                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Animação/Motion produzida para o Núcleo de Inovação da <b>Raízen</b> sobre monitoramento climático.',
+                                    class: 'prop-pt2 prop-txt-center'
+                                  }
+                                },
+                                {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/URrbcLiybnQ?si=tnjcLQfYAMh_Ox_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+                                {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: 'util-image-center',
+                                        src: 'risco_02.png',
+                                        class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                        alt: ''
+                                    }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Demo Reel com os principais trabalhos desenvolvidos para a <b>Pearson Education</b>.',
+                                    class: ' prop-txt-center'
+                                  }
+                                },
+                                {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FFna_Cbcfqg?si=3Wz0W3w6YUE2cXQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+                                                                {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/n9nDOHyP6i8?si=ld9-GZJgt1JLUWbe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+                                {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: 'util-image-center',
+                                        src: 'risco_02.png',
+                                        class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                        alt: ''
+                                    }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Vídeo promocional produzido para o jornal <b>Itatiba Hoje</b>',
+                                    class: ' prop-txt-center'
+                                  }
+                                },
+                                                                {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/AUvhVHYTWDM?si=c_xkMCzeeGyDMpiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+
+                            ]
+                        },
+                    ]
+                })
+
+            section.sec03 
+                +template-wildcard({
+                  bg: '',
+                  video: '',
+                  class: '',
+                  columns: [
+                    {
+                      col:[
+                        {
+                          type: 'class',
+                          resource: 'prop-flex-align-center prop-txt-center'
+                        },
+                        {
+                                    type: 'button',
+                                    resource: {
+                                    alt: 'button',
+                                    class: 'btn01 prop-w-porc20 prop-tablet-w-porc40 prop-m8 ',
+                                    attr:{
+                                        onClick:"navigate.goto('tela01-index')"
+                                    },
+                                    content: [
+                                        {
+                                        type: 'subtext',
+                                        resource: {
+                                            content: 'Voltar',
+                                            class: 'color-01 prop-txt-bold prop-p1'
+                                        }
+                                        },
+
+                                    ]
+                                    }
+                            },
+                      ],
+                    }
+                  ]
+                })
+
+
+
+
+block scripts
+    script(src="script.js")

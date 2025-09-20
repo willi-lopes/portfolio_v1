@@ -1,0 +1,36 @@
+{
+    "builder": "for-engine",
+    "dependencies": {
+        "flamboyant": {
+            "flamboyant-engine": "6.0.1",
+            "flamboyant-props": "1.0.2"
+        },
+
+        "theme": {
+            "tema-base": ""
+        },
+
+        "templates": {
+            "template-wildcard": "1.2.2",
+            "template-exercise-quiz": "1.0.8",
+            "template-exercise-grid-puzzles": "1.0.1",
+            "template-exercise-drag-drop": "1.0.2",
+            "template-exercise-memory-card": "1.0.3",
+            "template-exercise-buzzfeed": "1.0.3",
+            "template-header": "1.1.4",
+            "template-timeline": "1.0.5"
+        },
+
+        "components": {
+            "control-components": "",
+            "control-acessibility": "",
+            "control-scorm": "",
+            "interaction-modal": "",
+            "interaction-arrows": "",
+            "interaction-progress-line": "",
+            "interaction-menu-sideview":"",
+            "interaction-sequencial-help":"",
+            "script-wow": ""
+        }
+    }
+}

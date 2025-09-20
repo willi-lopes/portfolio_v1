@@ -1,0 +1,94 @@
+.container-template-exercise-quiz {
+    .container-exercise-quiz {
+        .container-question {
+            .container-alternative {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &.actived {
+                    background-color: @color-01;
+                    @media (max-width: @mobile) {
+                        padding: 1rem .5rem;
+                    }
+                    .selector {
+                        
+                    }
+                    .text {
+                        color: @color-white;
+                    }
+                }
+                .selector {
+                    background-color: @color-white;
+                    color: @color-01;
+                    border: .3rem solid @color-01;
+                    border-radius: 0;
+                    width: 3rem;
+                    height: 3rem;
+                    font-size: 1.4rem;
+                    margin: 0;
+                    font-weight: bold;
+                }
+                .text {
+                    width: calc( 100% - 4rem);
+                    text-align: left;
+                    margin: 0;
+                    font-weight: 100;
+                }
+            }
+            .container-alternative + .container-alternative {
+                margin: 1rem 0 0;
+            }
+          
+            .footer {
+                margin: 1rem 0 0;
+                height: 3rem;
+                display: flex;
+                justify-content: flex-end;
+                .container-btn {
+                    width: fit-content;
+                    .botao {
+                        padding: 0 2rem;
+                        height: 100%;
+                        color: @color-01;
+                        font-weight: bold;
+                        font-size: @font-06;
+                    }
+                }
+            }
+              //     display: flex;
+            //     align-items: center;
+            //     @media (max-width: @mobile) {
+            //         justify-content: center;
+            //         flex-wrap: wrap;
+            //     }
+            //     .selector {
+            //         background-color: @color-07;
+            //         color: @color-01;
+            //         border-radius: 100%;
+            //         margin-right: 1rem;
+            //         font-size: 1.4rem;
+            //         width:3rem;
+            //         height: 3rem;
+            //         font-weight: bold;
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //     }
+            //     &.actived {
+            //         background-color: @color-06;
+            //     }
+
+            //     .text{
+            //         width:90%;
+            //         text-align: left;
+            //         font-weight: normal;
+            //         padding: 0.2rem 0;
+            //     }
+            // }
+            
+        }
+        // .feedback {
+        //     background-color: @color-01;
+        // }
+    }
+}

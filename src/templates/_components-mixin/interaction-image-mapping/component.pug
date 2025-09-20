@@ -1,0 +1,28 @@
+- var systemScreenCount = 0;
+mixin interaction-image-mapping(screens)
+      - systemScreenCount++;
+      .interaction-image-mapping(class!=screens.class,count!=systemScreenCount, nextLiberate!=screens.nextLiberate, pinsLiberate!=screens.pinsLiberate)
+        each item, indice in screens.content
+          - var filename = "../../assets/img/" + item.screen.src;
+          - var classes = (item.screen.class) ? item.screen.class : '';
+          - var alt = (item.screen.alt ? item.screen.alt : '' )
+          - var tabindex = (item.screen.alt ? acessib_count++ : -1 )
+          - var ariaHidden = (!item.screen.alt) ? true : false
+          - var screenClass = "image-mapping image-mapping" + indice + " " + classes;
+          .interaction-mapping-int(model!=item.model)
+            .image-mapping-base.image-mapping-top
+            .image-mapping-container(class!=screenClass, ind!=indice, alt=alt, pos=0, aria-label=alt, tabindex=tabindex, aria-hidden=ariaHidden)&attributes((item.screen.attr) ? item.screen.attr : '')
+              img(class="image-mapping-img", src=filename)
+              each pin, ind in item.pins
+                - var pinClassCustom = (pin.class) ? pin.class : '';
+                - var infoClassCustom = (pin.info.class) ? pin.info.class : '';
+                - var pinClass = "image-mapping-pin-"+ systemScreenCount + "-" + indice + "-" + ind + " " + pinClassCustom;
+                - var infoClass = "image-mapping-info-"+ systemScreenCount + "-" + indice + "-" + ind + " " + infoClassCustom;
+
+                button.image-mapping-pin(class!=pinClass, data-modal!=pin.info.modal, parent!=indice, ind!=ind, pin_x!=pin.x, pin_y!=pin.y )&attributes((pin.attr) ? pin.attr : '')
+                  +control-elements(pin.data)
+                if(pin.info.data)
+                  .image-mapping-info(class!=infoClass, parent!=indice, ind!=ind )
+                    +control-elements(pin.info.data)
+            .image-mapping-base.image-mapping-bottom
+        block

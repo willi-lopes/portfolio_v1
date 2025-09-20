@@ -1,0 +1,117 @@
+.container-interaction-arrows {
+  &.top {
+    .container-arrow {
+      top: 3.35em;
+      bottom: auto;
+      margin: 0;
+    }
+  }
+
+  &.center {
+    .container-arrow {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  &.bottom {
+    .container-arrow {
+      top: auto;
+      margin: 0;
+      bottom: 0.85em;
+    }
+  }
+
+  &.tablet_top {
+    @media (max-width: @tablet) {
+      .container-arrow {
+        top: 3.35em;
+        bottom: auto;
+        margin: 0;
+      }
+    }
+  }
+
+  &.tablet_center {
+    @media (max-width: @tablet) {
+      .container-arrow {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  &.tablet_bottom {
+    @media (max-width: @tablet) {
+      .container-arrow {
+        top: auto;
+        margin: 0;
+        bottom: 0.85em;
+      }
+    }
+  }
+
+  &.mobile_top {
+    @media (max-width: @mobile) {
+      .container-arrow {
+        top: 3.35em;
+        bottom: auto;
+        margin: 0;
+      }
+    }
+  }
+
+  &.mobile_center {
+    @media (max-width: @mobile) {
+      .container-arrow {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  &.mobile_bottom {
+    @media (max-width: @mobile) {
+      .container-arrow {
+        top: auto;
+        margin: 0;
+        bottom: 0.85em;
+      }
+    }
+  }
+
+  .container-arrow {
+    background-image: url(../../assets/img/arrow.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 5.5em;
+    height: 5.5em;
+    transition: 0.35s opacity ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+
+    @media screen and (max-width: @tablet) {
+      width: 3.5em;
+      height: 3.5em;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &.container-arrow-left {
+      left: 1em;
+      transform: scaleX(-1);
+    }
+
+    &.container-arrow-right {
+      right: 1em;
+    }
+  }
+}

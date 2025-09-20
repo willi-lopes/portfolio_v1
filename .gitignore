@@ -1,0 +1,7 @@
+node_modules
+flamboyant_modules
+package-lock.json
+scorm
+sys/automation/*
+*.zip
+*.doc*

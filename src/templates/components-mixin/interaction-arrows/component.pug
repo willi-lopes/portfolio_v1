@@ -1,0 +1,21 @@
+mixin interaction-arrows(component)
+  - var posClass =  (component.position) ? component.position : '';
+  - var defaultClass =  (component.default) ? component.default : '';
+  - var tabletClass = (component.tablet) ? "tablet_"+component.tablet : '' ;
+  - var mobileClass = (component.mobile) ? "mobile_"+component.mobile : '' ;
+  - var positionClass = posClass + " " + defaultClass + " " + tabletClass + " " + mobileClass;
+
+  .container-interaction-arrows(class!=positionClass)
+    button.container-arrow.container-arrow-left.arrow-left(
+      tabindex=1001,
+      role="button",
+      aria-label="Voltar para a tela anterior.",
+      title="Seta para esquerda."
+    )
+
+    button.container-arrow.container-arrow-right.arrow-right(
+      tabindex=1000,
+      role="button",
+      aria-label="Avançar para a próxima tela.",
+      title="Seta para direita."
+    )

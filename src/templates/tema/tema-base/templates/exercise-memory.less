@@ -1,0 +1,22 @@
+.exercise-memory {
+    .card {
+        height: 12rem;
+        @media (max-width: @tablet) {
+            width: 50%;
+        }
+        .front {
+            background-color: @color-01;
+            .text {
+                color: @color-white;
+            }
+        }
+        .back {
+            border: solid .3rem @color-01;
+            background-color: @color-white;
+            padding: 1rem;
+            .text {
+                text-align: center;
+            }
+        }
+    }
+}

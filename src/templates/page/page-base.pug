@@ -1,0 +1,223 @@
+include ../../../flamboyant_modules/templates/import.pug
+include mixins/index.pug
+
+doctype html
+html
+head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    +linkStyles('reset.css')
+    +linkStyles('animate.min.css')
+    block styles
+    +linkModuleStyles('flamboyant-props.min.css')
+
+body
+    header
+        +template-header({
+            id: 'header',
+            class: 'fixedHeader',
+            hamburguer: true,
+            data: [
+
+                {
+                    type: 'menu-list',
+                    resource: [
+                        {
+                            navSections: {
+                                "id": '',
+                                "link": '#ponto01',
+                                'class': '',
+                                'content': 'Sobre'
+                            }
+                        },
+                        {
+                            navSections: {
+                                "id": '',
+                                "link": '#ponto02',
+                                'class': '',
+                                'content': 'Trabalhos'
+                            }
+                        },
+
+
+                    ]
+                }
+            ]
+        })
+
+    +interaction-progress-line({scroll:false})
+    +interaction-menu-sideview({ btnClass:'menu-sideview-btn' })
+    +interaction-menu-sideview({btnClass:'sequencial-help-btn', json:'sideview.json'})
+
+    //- +interaction-sequencial-help({btnClass:'sequencial-help-btn', oboarding:true})
+        +template-wildcard({
+            columns:[
+                {
+                    col:[
+                        {
+                            type: 'slides',
+                            resource:{
+                                class: '',
+                                slides: [
+                                    {
+                                        columns:[
+                                            {
+                                                col:[
+                                                    {
+                                                        type: 'video',
+                                                        resource: {
+                                                            attr: {
+                                                                loop: true,
+                                                                autoplay: true,
+                                                                controls: false,
+                                                                muted: true,
+                                                            },
+                                                            class: 'video1',
+                                                            src: 'help1.mp4',
+                                                            alt: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'subtitle',
+                                                        resource: {
+                                                            content: 'Vamos começar?',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'text',
+                                                        resource: {
+                                                            content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        columns:[
+                                            {
+                                                col:[
+                                                    {
+                                                        type: 'video',
+                                                        resource: {
+                                                            attr: {
+                                                                loop: true,
+                                                                autoplay: true,
+                                                                controls: false,
+                                                            },
+                                                            class: 'video2',
+                                                            src: 'help2.mp4',
+                                                            alt: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'subtitle',
+                                                        resource: {
+                                                            content: 'Para fechar pop-up',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'text',
+                                                        resource: {
+                                                            content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        columns:[
+                                            {
+                                                col:[
+                                                    {
+                                                        type: 'video',
+                                                        resource: {
+                                                            attr: {
+                                                                loop: true,
+                                                                autoplay: true,
+                                                                controls: false,
+                                                            },
+                                                            class: 'video3',
+                                                            src: 'help3.mp4',
+                                                            alt: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'subtitle',
+                                                        resource: {
+                                                            content: 'Menu acessibilidade',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'text',
+                                                        resource: {
+                                                            content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        columns:[
+                                            {
+                                                col:[
+                                                    {
+                                                        type: 'video',
+                                                        resource: {
+                                                            attr: {
+                                                                loop: true,
+                                                                autoplay: true,
+                                                                controls: false,
+                                                            },
+                                                            class: 'video4',
+                                                            src: 'help4.mp4',
+                                                            alt: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'subtitle',
+                                                        resource: {
+                                                            content: 'Para avançar e voltar',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                    {
+                                                        type: 'text',
+                                                        resource: {
+                                                            content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',
+                                                            class: ''
+                                                        }
+                                                    },
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                ]
+                            }
+                        },
+                    ],
+                }
+            ]
+                })
+
+    interection
+        +interaction-arrows({position: 'bottom'})
+
+    block body
+
++scriptScripts('jquery.min.js')
++scriptScripts('jquery-ui.min.js')
++scriptScripts('jquery.ui.touch-punch.min.js')
++scriptScripts('components.mixin.scripts.js')
++scriptScripts('page.js')
+block scripts

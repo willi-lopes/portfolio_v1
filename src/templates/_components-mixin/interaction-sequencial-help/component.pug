@@ -1,0 +1,13 @@
+mixin interaction-sequencial-help(container)
+  - var oboarding = false;
+  - var btnClass = 'sequencial-help-btn';
+
+  if ( container )
+    if ( container.oboarding )
+      - oboarding = container.oboarding;
+    if ( container.btnClass )
+      - btnClass = container.btnClass;
+
+  section.interaction-sequencial-help( btnClass!=btnClass, oboarding!=oboarding )
+    +modal('modal-sequencial-help', 'modal modal-sequencial-help')
+      block

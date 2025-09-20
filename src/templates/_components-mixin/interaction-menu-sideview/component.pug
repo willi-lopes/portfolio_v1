@@ -1,0 +1,30 @@
+mixin interaction-menu-sideview( component )
+  - var json = null;
+  - var btnClass = 'menu-sideview-btn';
+
+  if (component)
+    if (component.json)
+      - json = component.json;
+    if (component.btnClass)
+      - btnClass = component.btnClass;
+
+  .component-menu-sideview( btnClass!=btnClass, json!=json )
+    .sidebarMenu
+      button.closeMenuBtn
+        img(src="../../assets/img/closeMenuBtn.svg")
+      .sidebarMenuInner
+        ul.sidebarMenuContainer
+        //- lista criada via js
+          li.dropdown
+            a(href="#", data-toggle="dropdown") First Menu <i class="icon-arrow"></i>
+            ul(class="dropdown-menu")
+              li
+                a(href="#") Home
+              li
+                a(href="#") About Us
+              li
+                a(href="#") Home
+              li
+                a(href="#") About Us
+
+

@@ -1,0 +1,66 @@
+.interaction-sequencial-help{
+  .modal-sequencial-help{
+    .flex-center{
+      .box{
+        width: 42rem;
+        max-width: 95vw ;
+
+        @media (max-width: @tablet) {
+          width: @row-width-tablet ;
+        }
+
+        @media (max-width: @mobile) {
+          width: @row-width-mobile ;
+        }
+
+        background-color: blue;
+
+        .col-full .wrapper{
+          padding:0 ;
+        }
+
+        .slider{
+          margin: 0;
+          display:block;
+
+          .owl-nav{
+            display: none;
+            button{
+              margin: 0 ;
+              transform: scaleX(1) ;
+              bottom: 0 ;
+              top:auto ;
+              width:5rem;
+
+              &.owl-prev {
+                left: 1rem;
+              }
+
+              &.owl-next {
+                right: 1rem;
+              }
+
+              img{
+                width:100% ;
+              }
+            }
+          }
+
+          .subtitle{
+            text-align: center;
+            padding: 1rem;
+          }
+          p{
+            padding: 0 2rem 4rem 2rem;
+          }
+        }
+
+
+        *{
+          color: #fff  ;
+        }
+
+      }
+    }
+  }
+}

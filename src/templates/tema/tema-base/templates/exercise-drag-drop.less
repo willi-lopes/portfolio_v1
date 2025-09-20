@@ -1,0 +1,122 @@
+.container-template-exercise-drag-drop {
+    background-position: center;
+    background-size: cover;
+  
+    .exercise-drag-drop {
+        // Drag-drop coluna dupla
+        .colunas {
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                border-right: 0.3rem dotted @color-01;
+                height: 100%;
+                width: 0;
+                top: 0;
+                left: calc(50% - 0.15rem);
+        
+                @media (max-width: @tablet) {
+                    display: none;
+                }
+            }
+    
+            .coluna {
+                &.col-itens {
+                    @media (max-width: @tablet) {
+                        padding: 0 0 1rem;
+                        border-bottom: 0.3rem dotted @color-01;
+                    }
+                }
+                .container-item {
+                    .item-select {
+                        background-color: @color-01;
+                        border: .3rem solid @color-01;
+                        padding: 1rem;
+                        filter: none;
+
+                        p.text {
+                            color: @color-white;
+                        }
+                    }
+                }
+                .container-alvo {
+                    position: relative;
+                    .alvo-select {
+                        overflow: initial;
+                        border: .3rem solid @color-01;
+                        .item-select {
+                            background-color: @color-01;
+                            width: calc(100% + 10px);
+                            height: calc(100% + 10px);
+                            margin: -5px;
+                            padding: 5px;
+                            border: .3rem solid @color-01;
+                            p.text {
+                                color: @color-white;
+                            }
+                        }
+                    }
+                }
+                .container-item + .container-item,
+                .container-alvo + .container-alvo {
+                    margin: 1rem 0 0;
+                }
+            }
+            .coluna + .coluna {
+                @media (max-width: @tablet) {
+                    margin: 1rem 0 0;
+                }
+            }
+        }
+        
+        // Drag-drop coluna unica
+        &.drag-drop-horizontal {
+            .colunas {
+                flex-direction: column;
+                &::after {
+                    display: none;
+                }
+                .coluna {
+                    width: 100%;
+                    &.col-alvo {
+                        margin: 1rem 0 0;
+                        padding: 1rem 0 0;
+                        border-top: 0.3rem dotted @color-01;
+                        @media (max-width: @tablet) {
+                            border: none;
+                            margin: 0;
+                        }
+                        .item-select {
+                            border: none;
+                        }
+                    }
+                    .item-select, 
+                    .alvo-select {
+                        min-height: 2.5rem;
+                        height: auto;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        // Botão confirmar
+        .footer{
+            width: 100%;
+            height: 3rem;
+            margin: 2rem 0 0;
+            .container-btn {
+                height: 100%;
+                justify-content: flex-end;
+                button {
+                    padding: 0 2rem;
+                    height: 100%;
+                    width: fit-content;
+                    color: #008CFF;
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+button.helpButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: @color-02;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+    padding: 1rem;
+    p {
+        font-family: Arial !important;
+    }
+}
+
+.modal#help {
+    .flex-center {
+        .box {
+            .boxHelp {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-evenly;
+                margin: 1rem 0 0;
+                position: relative;
+                flex-wrap: wrap;
+                @media (max-width: @tablet) {
+                    margin: 2rem 0 0;
+                }
+                .block {
+                    border: .2rem solid @color-black;
+                    padding: 1rem;
+                    width: 38%;
+                    margin: 0 1rem;
+                    @media (max-width: @tablet) {
+                        width: 100%;
+                        margin: 1rem 0 0;
+                    }
+                    .textHelp {
+                        display: flex;
+                        align-items: center;
+                        height: 12rem;
+                        @media (max-width: @tablet) {
+                            height: auto;
+                        }
+                        p {
+                            color: @color-white;
+                        }
+                    }
+                    img {
+                        margin: 1rem 0 0;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

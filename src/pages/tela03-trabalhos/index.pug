@@ -1,0 +1,369 @@
+extends ../../templates/page/page-base.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    body(prev-hide, next-hide, header-hide)
+        .bg_01
+        .onePage 
+
+            section.sec01.bg_02
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+
+                    columns:[
+
+                        {
+                            type: 'wide',
+                            col:[
+                                {
+                                    type: 'class',
+                                    resource: ''
+                                },
+
+                                                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'bg_titulo.png',
+                                    class: ' media_01',
+                                    alt: ''
+                                  }
+                                },
+
+
+                            ]
+                        },
+
+                    ]
+                })
+
+
+
+            section.sec02.full-H
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+                                {
+                                  type: 'title',
+                                  resource: {
+                                    content: 'Wireframes, UX/UI & Desenvolvimento HTML',
+                                    class: 'color-01'
+                                  }
+                                },
+
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: '',
+                                    src: 'risca_01.png',
+                                    class: 'prop-w-porc40 prop-tablet-w-porc90',
+                                    alt: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Nesta seção, apresento uma seleção dos principais projetos desenvolvidos para diferentes clientes ao longo da minha trajetória, utilizando diversas ferramentas como todo o pacote Creative Cloud (Photoshop, Illustrator, InDesign etc.), PowerPoint e diagramação com HTML, CSS e JS.',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'A maioria dos projetos teve como base os wireframes desenvolvidos em colaboração com a equipe de desenvolvimento.',
+                                    class: ''
+                                  }
+                                },
+                                
+                            ]
+                        },
+                        {
+                            type: '',
+                            col:[
+
+
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'img_02.png',
+                                    class: 'prop-w-porc70',
+                                    alt: ''
+                                  }
+                                }, 
+                              {
+                              type: 'subtext',
+                              resource: {
+                                content: 'Exemplos de telas desenvolvidas para a construção de cursos, infográficos e landing pages.',
+                                class: 'prop-txt-center prop-pt1'
+                              }
+                            },
+                            ]
+                        },
+
+                    ]
+                })
+
+            section.sec03.full-H
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+
+                                {
+                                  type: 'subtitle',
+                                  resource: {
+                                    content: 'Itaú Social (Núcleo)',
+                                    class: 'color-02'
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Liderei uma equipe de designers e freelancers para atender ao alto volume de demandas do projeto, atuando desde sua fase inicial. O grande desafio foi escalar a produção educacional - alcançamos a marca de 200 objetos de aprendizagem entregues em um único mês.',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Minha atuação abrangeu a coordenação da equipe criativa, garantindo qualidade e cumprimento de prazos; o desenvolvimento de trilhas de aprendizagem personalizadas com objetivos pedagógicos específicos; a criação de identidades visuais únicas para cada projeto, mantendo a coerência institucional; e a implementação de wireframes e telas otimizadas para produção em larga escala.',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Um projeto que exigiu tanto gestão eficiente de pessoas quanto excelência criativa para entregar resultados consistentes dentro do cronograma acelerado.',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'img_03.png',
+                                    class: 'prop-w-porc60 prop-mt1',
+                                    alt: ''
+                                  }
+                                },
+                                
+                            ]
+                        },
+
+
+                    ]
+                })
+            
+            section.risco 
+              +template-wildcard({
+                bg: '',
+                video: '',
+                class: '',
+                columns: [
+                  {
+                    col:[
+                      {
+                        type: 'class',
+                        resource: 'prop-flex-align-center prop-txt-center'
+                      },
+                          {
+                              type: 'image',
+                              resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'risco_02.png',
+                                  class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                  alt: ''
+                              }
+                          },
+                    ],
+                  }
+                ]
+              })
+
+            section.sec04.full-H
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+                                {
+                                  type: 'subtitle',
+                                  resource: {
+                                    content: 'Learning Map - Renner',
+                                    class: 'color-02'
+                                  }
+                                },
+
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Desenvolvi ilustrações customizadas, animações, conjuntos de ícones e telas completas – um projeto complexo em grande escala com muitas arvores de decisões, utilizando diversas ferramentas no processo.',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Um projeto que exigiu muita atenção, pois tinha pouco tempo.',
+                                    class: ''
+                                  }
+                                },
+                                
+                            ]
+                        },
+                        {
+                            type: '',
+                            col:[
+
+
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'img_04.png',
+                                    class: 'prop-w-porc100',
+                                    alt: ''
+                                  }
+                                }, 
+
+                            ]
+                        },
+
+                    ]
+                })
+            
+            section.risco 
+              +template-wildcard({
+                bg: '',
+                video: '',
+                class: '',
+                columns: [
+                  {
+                    col:[
+                      {
+                        type: 'class',
+                        resource: 'prop-flex-align-center prop-txt-center'
+                      },
+                          {
+                              type: 'image',
+                              resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'risco_02.png',
+                                  class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                  alt: ''
+                              }
+                          },
+                    ],
+                  }
+                ]
+              })
+
+            section.sec05
+                +template-wildcard({
+                    bg: '',
+                    class: 'prop-pt5',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+
+                                {
+                                  type: 'subtitle',
+                                  resource: {
+                                    content: 'Aplicações de branding, KVs (Key Visuals) e outros elementos sobre os wireframes',
+                                    class: 'color-02'
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Aqui está um apanhado de projetos que utilizam wireframes como base. Mesmo em projetos customizados, partíamos de um modelo padrão para desenvolver as soluções.',
+                                    class: ''
+                                  }
+                                },
+
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'img_05.png',
+                                    class: 'prop-w-porc60 prop-mt1',
+                                    alt: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Dezenas (ou até centenas!) de projetos desenvolvidos com os mais variados estilos – esta é apenas uma pequena amostra do que já produzi.',
+                                    class: 'prop-pt3'
+                                  }
+                                },
+                                
+                            ]
+                        },
+
+
+                    ]
+                })
+            
+            
+
+            section.sec03 
+                +template-wildcard({
+                  bg: '',
+                  video: '',
+                  class: '',
+                  columns: [
+                    {
+                      col:[
+                        {
+                          type: 'class',
+                          resource: 'prop-flex-align-center prop-txt-center'
+                        },
+                        {
+                                    type: 'button',
+                                    resource: {
+                                    alt: 'button',
+                                    class: 'btn01 prop-w-porc20 prop-tablet-w-porc40 prop-m5 ',
+                                    attr:{
+                                        onClick:"navigate.goto('tela01-index')"
+                                    },
+                                    content: [
+                                        {
+                                        type: 'subtext',
+                                        resource: {
+                                            content: 'Voltar',
+                                            class: 'color-01 prop-txt-bold prop-p1'
+                                        }
+                                        },
+
+                                    ]
+                                    }
+                            },
+                      ],
+                    }
+                  ]
+                })
+
+
+
+
+block scripts
+    script(src="script.js")

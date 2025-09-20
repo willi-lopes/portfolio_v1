@@ -1,0 +1,31 @@
+doctype html
+html.mr-fontsize(lang='pt')
+	head
+		title
+			block title
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		link(rel='shortcut icon' href='app/assets/img/favicon.png')
+		link(rel='stylesheet', type="text/css", href='app/styles/reset.css')
+		link(rel='stylesheet', type="text/css", href='app/styles/animate.min.css')
+		link(rel='stylesheet', type="text/css", href='app/modules/engine.css')
+
+	body
+		main#main
+		
+		//- vendor
+		script(src='app/scripts/jquery.min.js')
+		block vendor-js
+
+		//- config & engine
+		script(src='app/config.js')
+		script(src='app/modules/engine.min.js')
+		//- modules
+		block modules-js
+		
+		//- Main
+		script(src='app/scripts/main.js')
+		
+		//- loader
+		include mixins/loader/component.pug

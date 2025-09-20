@@ -1,0 +1,91 @@
+.bigtitle,
+h1 {
+    font-size: @font-01;
+    line-height: @space-height-title;
+    font-weight: bold;
+    margin-bottom: calc(@space-text * 2);
+    @media (max-width: @tablet) {
+        font-size: 2.4rem;
+    }
+
+    @media @ie11 {
+        width: 100%;
+    }
+}
+
+.title,
+h2 {
+    font-size: @font-02;
+    line-height: @space-height-title;
+    font-weight: bold;
+    margin-bottom: calc(@space-text * 1.5);
+
+    @media @ie11 {
+        width: 100%;
+    }
+}
+
+.subtitle,
+h3 {
+    font-size: @font-03;
+    font-weight: bold;
+    line-height: @space-height-title;
+    margin-bottom: calc(@space-text * 1.2);
+
+    @media @ie11 {
+        width: 100%;
+    }
+}
+
+h4 {
+    font-size: @font-04;
+    line-height: @space-height-title;
+    font-weight: bold;
+
+    @media @ie11 {
+        width: 100%;
+    }
+}
+
+.text,
+li,
+p {
+    font-size: @font-05;
+    line-height: @space-height;
+    color: @color-04;
+    font-weight: 300;
+
+    & + .text,
+    & + p {
+        margin-top: calc(@space-text * 1);
+    }
+
+    @media @ie11 {
+        width: 100%;
+    }
+}
+
+.smalltext,
+small {
+    font-size: @font-06;
+
+    @media @ie11 {
+        width: 100%;
+    }
+}
+
+span.highlighter {
+    background-color: @color-06;
+    font-style: bold;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+.emphasis {
+    margin: @space-text 0;
+    padding: @space-text;
+    background: @color-06;
+}

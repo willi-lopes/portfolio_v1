@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="768" viewBox="0 0 768 768">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_4728" data-name="Retângulo 4728" width="768" height="768" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_7851" data-name="Grupo 7851" transform="translate(-715)">
+    <path id="Caminho_6982" data-name="Caminho 6982" d="M0,0H768V768H0Z" transform="translate(715)" fill="#ebdbcc"/>
+    <rect id="Retângulo_4734" data-name="Retângulo 4734" width="768" height="765" transform="translate(715)" fill="none"/>
+    <g id="Grupo_7720" data-name="Grupo 7720" transform="translate(715)">
+      <path id="Caminho_6979" data-name="Caminho 6979" d="M174.671,0C271.14,0,349.343,81.744,349.343,182.581s-78.2,182.581-174.671,182.581S0,283.418,0,182.581,78.2,0,174.671,0Z" fill="#00aabd"/>
+      <path id="Elipse_3_-_Contorno" data-name="Elipse 3 - Contorno" d="M174.671,46.37c-71.853,0-130.31,61.1-130.31,136.211s58.457,136.211,130.31,136.211,130.31-61.1,130.31-136.211S246.525,46.37,174.671,46.37m0-46.37C271.14,0,349.343,81.744,349.343,182.581s-78.2,182.581-174.671,182.581S0,283.418,0,182.581,78.2,0,174.671,0Z" fill="#0078bb"/>
+      <path id="Caminho_6978" data-name="Caminho 6978" d="M91.495,0c50.531,0,91.495,42.818,91.495,95.638s-40.964,95.638-91.495,95.638S0,148.457,0,95.638,40.964,0,91.495,0Z" transform="translate(83.177 86.943)" fill="#fbb33d"/>
+      <path id="Elipse_4_-_Contorno" data-name="Elipse 4 - Contorno" d="M91.495,46.37c-25.99,0-47.134,22.1-47.134,49.268s21.144,49.268,47.134,49.268,47.134-22.1,47.134-49.268S117.484,46.37,91.495,46.37m0-46.37c50.531,0,91.495,42.818,91.495,95.638s-40.964,95.638-91.495,95.638S0,148.457,0,95.638,40.964,0,91.495,0Z" transform="translate(83.177 86.943)" fill="#c1666c"/>
+    </g>
+    <path id="Caminho_6980" data-name="Caminho 6980" d="M0,0H510.068V49.906H0Z" transform="translate(1115.249) rotate(90)" fill="#e58925"/>
+    <path id="Caminho_6981" data-name="Caminho 6981" d="M0,0H510.068V49.906H0Z" transform="translate(1164.155) rotate(90)" fill="#fed070"/>
+    <g id="Grupo_de_máscara_8" data-name="Grupo de máscara 8" transform="translate(715)" clip-path="url(#clip-path)">
+      <g id="Grupo_7727" data-name="Grupo 7727" transform="translate(0 324.589)">
+        <g id="Grupo_7721" data-name="Grupo 7721">
+          <ellipse id="Elipse_3" data-name="Elipse 3" cx="174.671" cy="182.581" rx="174.671" ry="182.581" transform="translate(0 260.83)" fill="#fed070"/>
+          <ellipse id="Elipse_6" data-name="Elipse 6" cx="174.671" cy="182.581" rx="174.671" ry="182.581" transform="translate(593.329)" fill="#00aabc"/>
+        </g>
+        <g id="Grupo_7726" data-name="Grupo 7726" transform="translate(831.769 443.411) rotate(180)">
+          <rect id="Retângulo_4729" data-name="Retângulo 4729" width="382.614" height="144.906" transform="translate(0)" fill="#e58925"/>
+          <g id="Grupo_7724" data-name="Grupo 7724" transform="translate(108.13 55.064)">
+            <ellipse id="Elipse_5" data-name="Elipse 5" cx="16.635" cy="17.389" rx="16.635" ry="17.389" transform="translate(0)" fill="#fff"/>
+            <ellipse id="Elipse_5-2" data-name="Elipse 5" cx="16.635" cy="17.389" rx="16.635" ry="17.389" transform="translate(72.087)" fill="#fff"/>
+            <ellipse id="Elipse_5-3" data-name="Elipse 5" cx="16.635" cy="17.389" rx="16.635" ry="17.389" transform="translate(144.173)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Grupo_7804" data-name="Grupo 7804" transform="translate(1164.155)">
+      <rect id="Retângulo_4733" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 46.37) rotate(180)" fill="#e58925"/>
+      <rect id="Retângulo_4733-2" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 86.943) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_4733-3" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 124.619) rotate(180)" fill="#c1666c"/>
+      <rect id="Retângulo_4733-4" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 162.294) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_4733-5" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 199.97) rotate(180)" fill="#e58925"/>
+      <rect id="Retângulo_4733-6" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 240.543) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_4733-7" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 278.219) rotate(180)" fill="#c1666c"/>
+      <rect id="Retângulo_4733-8" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 315.894) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_4733-9" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 356.468) rotate(180)" fill="#e58925"/>
+      <rect id="Retângulo_4733-10" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 394.143) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_4733-11" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 431.819) rotate(180)" fill="#c1666c"/>
+      <rect id="Retângulo_4733-12" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 469.494) rotate(180)" fill="#fff"/>
+      <rect id="Retângulo_4733-13" data-name="Retângulo 4733" width="201.845" height="46.37" transform="translate(201.845 510.068) rotate(180)" fill="#e58925"/>
+    </g>
+    <rect id="Retângulo_4732" data-name="Retângulo 4732" width="174.671" height="257.932" transform="translate(715 510.068)" fill="#0078bb"/>
+    <g id="Grupo_7725" data-name="Grupo 7725" transform="translate(715 365.162)">
+      <rect id="Retângulo_4729-2" data-name="Retângulo 4729" width="449.155" height="144.906" fill="#c1666c"/>
+      <g id="Grupo_7724-2" data-name="Grupo 7724" transform="translate(216.26 55.064)">
+        <ellipse id="Elipse_5-4" data-name="Elipse 5" cx="16.635" cy="17.389" rx="16.635" ry="17.389" fill="#fff"/>
+        <ellipse id="Elipse_5-5" data-name="Elipse 5" cx="16.635" cy="17.389" rx="16.635" ry="17.389" transform="translate(72.087)" fill="#fff"/>
+        <ellipse id="Elipse_5-6" data-name="Elipse 5" cx="16.635" cy="17.389" rx="16.635" ry="17.389" transform="translate(144.173)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

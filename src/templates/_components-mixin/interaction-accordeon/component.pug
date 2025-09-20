@@ -1,0 +1,12 @@
+mixin interaction-accordeon(contents)
+  .interaction-accordeon.accordeon.parent-inside-col
+    .bloco
+      - if(Array.isArray(contents) && contents.length)
+          each content in contents
+            .corpbtn
+              button.accordeon-title(tabindex=acessib_count++, aria-label=content.title.content)
+                h4(class!=content.title.class)&attributes((content.title.attr) ? content.title.attr : '')!= content.title.content
+                .seta-container(class!=(content.pulse)?"animated infinite pulse":"" )
+                  .img
+              .accordeon-texto
+                +control-wildcard(content.body)

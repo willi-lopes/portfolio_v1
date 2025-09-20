@@ -1,0 +1,6 @@
+mixin modal(id, classes, arrow_status_calss, next_page)
+	.modal.interaction-modal.parent-inside-col(id!=id class!=classes)
+		.flex-center
+			.box.in.delay1(aria-label="janela" aria-modal=true role="dialog" tabindex=acessib_count++)
+				block
+				button.modal-close(aria-label="Fechar modal."  arrow_status_class!=arrow_status_calss, next_page!=next_page)

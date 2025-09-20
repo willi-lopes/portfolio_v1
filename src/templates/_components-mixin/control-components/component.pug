@@ -1,0 +1,97 @@
+mixin control-components(container)
+  
+  if (container.type == "slides" || container.type == "carousel")
+    .container-slides(class!=container.class)&attributes((container.resource.attr) ? container.resource.attr : '')
+      +interaction-slides(container.resource)
+
+  if (container.type == "accordeon")
+    .container-accordeon(class!=container.class, nextLiberate!=container.nextLiberate)&attributes((container.resource.attr) ? container.resource.attr : '')
+      +interaction-accordeon(container.resource)
+
+  if (container.type == "menu-list")
+    <label for="toggle">&#9776;</label>
+    input(type="checkbox" id="toggle")
+    .container-menu-list
+      each menu in container.resource
+        if (menu.navSections)
+          if (menu.navSections.content )
+            a(id!=menu.navSections.id, href=menu.navSections.link, class!=menu.navSections.class, tabindex=-1)!=menu.navSections.content
+          if ( menu.navSections.elements )
+            a(id!=menu.navSections.id, href=menu.navSections.link, class!=menu.navSections.class, tabindex=-1)&attributes((menu.navSections.attr) ? menu.navSections.attr : '')
+              +control-elements(menu.navSections.elements)
+        if (menu.navPages)
+          if (menu.navPages.content )
+            button(id!=menu.navPages.id, onclick=menu.navPages.link, class!=menu.navPages.class)!=menu.navPages.content
+          if ( menu.navPages.elements )
+            +control-elements(menu.navPages.elements)
+
+  if (container.type == "timeline")
+    +interaction-timeline(container.resource)
+
+  if (container.type == "header")
+    +interaction-header(container.resource)
+
+  if (container.type == "exercise-quiz")
+    +exercise-quiz(container.resource)
+      block
+  
+  if (container.type == "exercise-vf")
+    +exercise-vf(container.resource)
+      block
+  
+  if (container.type == "exercise-buzzfeed")
+    +exercise-buzzfeed(container.resource)
+      block
+
+  if (container.type == "exercise-relacionar")
+    +exercise-relacionar(container.resource)
+      block
+
+  if (container.type == "exercise-memory-card")
+    +exercise-memory-card(container.resource)
+      block
+
+  if (container.type == "exercise-drag-drop")
+    +exercise-drag-drop(container.resource)
+      block
+  
+  if (container.type == "exercise-complete-sentence")
+    +exercise-complete-sentence(container.resource)
+      block
+  
+  if (container.type == "exercise-multi-options")
+    +exercise-multi-options(container.resource)
+      block
+      
+  if (container.type == "video-cuepoint")
+    +interaction-videoCuepoint(container.resource)
+      block
+  
+  if (container.type == "wistia")
+    +interaction-wistia(container.resource)
+      block
+
+  if (container.type == "image-mapping")
+    +interaction-image-mapping(container.resource)
+      block
+
+  if (container.type == "flipcard")
+    +interaction-flipcard(container.resource)
+      block
+
+  if (container.type == "copy-text")
+    +interaction-copy-text(container.resource)
+      block
+
+  if (container.type == "video-markers")
+    +control-video-markers(container.resource)
+      block
+  
+  if (container.type == "video-type-auto-change")
+    +videotypeautochange(container.resource)
+      block
+    
+  if (container.type == "exercise-grid-puzzles")
+    +exercise-grid-puzzles(container.resource)
+      block
+

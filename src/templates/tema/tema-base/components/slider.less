@@ -1,0 +1,105 @@
+.container-slides {
+    .slider {
+
+        // Slider conteudo
+        .owl-stage-outer {
+            .owl-stage {
+                .owl-item {
+                    .owl-item-container {
+                        // Coluna unica
+                        .col-full {
+                            .wrapper {
+                                padding: 2rem 7rem !important;
+                                @media (max-width: @tablet) {
+                                    padding: 2rem !important;
+                                }
+                            }
+                        }
+                        // Coluna dupla
+                        .row-wrap {
+                            padding: 2rem 7rem;
+                            @media (max-width: @tablet) {
+                                padding: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Carousel conteudo
+        &.model-carousel {
+            .owl-stage-outer {
+                .owl-stage {
+                    .owl-item {
+                        .owl-item-container {
+                            background-color: @color-01;
+                            opacity: 1;
+                            .col {
+                                .wrapper {
+                                    padding: 3rem !important;
+                                    @media (max-width: @tablet) {
+                                        padding: 2rem !important;
+                                    }
+                                    h1, h2, h3, h4, p {
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        &.center {
+                            .owl-item-container {
+                                background-color: @color-black;
+                                h1, h2, h3, h4 {
+                                    color: @color-01 !important;
+                                }
+                                p {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }   
+
+        // Setas de navegação
+        .owl-nav {
+            .owl-prev {
+                left: 0;
+            }
+            .owl-next {
+                right: 0;
+            }
+            .owl-prev,
+            .owl-next {
+                top: 0;
+                background-color: @color-white;
+                @media (max-width: @tablet) {
+                    display: none;
+                }
+            }
+            .disabled {
+                opacity: 1;
+                img {
+                    opacity: .2;
+                }
+            }
+        }
+
+        // Bullets
+        .owl-dots {
+            margin: .5rem 0;
+            .owl-dot {
+                span {
+                    background-color: @color-black;
+                }
+                &.active {
+                    span {
+                        background-color: @color-01;
+                    }
+                }
+            }
+        }
+    }
+}

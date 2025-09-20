@@ -1,0 +1,27 @@
+@color-00: black;
+.color-white{
+	color: @color-white !important;
+}
+.color-black{
+	color: @color-black !important;
+}
+.color-bg-white{
+	background-color: @color-white !important;
+}
+.color-bg-black{
+	background-color: @color-black !important;
+}
+
+.calc-color(@name, @property, @counter) when (@counter >= 0) {
+
+    @value: if((@counter < 10), ~"0@{counter}", @counter);
+
+    .@{name}@{value} {
+        @{property}: ~"@{color-@{value}} !important";
+    }
+      
+    .calc-color(@name, @property, @counter - 1);
+}
+
+.calc-color( color- , color, @color-all);
+.calc-color( color-bg- , background-color, @color-all);

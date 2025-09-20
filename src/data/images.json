@@ -1,0 +1,27 @@
+[
+	{
+		"pt-br": {
+			"imagem01": {
+				"src": "../../assets/img/img_pt.jpg",
+                "class": "",
+                "alt": ""
+			}
+		},
+
+		"en-us": {
+			"imagem01": {
+				"src": "../../assets/img/img_en.jpg",
+                "class": "",
+                "alt": ""
+			}
+		},
+
+		"es": {
+			"imagem01": {
+				"src": "../../assets/img/img_es.jpg",
+                "class": "",
+                "alt": ""
+			}
+		}
+	}
+]

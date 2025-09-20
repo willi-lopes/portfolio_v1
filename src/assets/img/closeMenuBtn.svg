@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <filter id="Retângulo_4623" x="0" y="0" width="65" height="65" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_8084" data-name="Grupo 8084" transform="translate(-22.5 -17.5)">
+    <g id="Grupo_7712" data-name="Grupo 7712" transform="translate(-1067 -701)">
+      <g transform="matrix(1, 0, 0, 1, 1089.5, 718.5)" filter="url(#Retângulo_4623)">
+        <g id="Retângulo_4623-2" data-name="Retângulo 4623" transform="translate(7.5 6.5)" fill="none" stroke="#fff" stroke-width="3">
+          <rect width="50" height="50" rx="10" stroke="none"/>
+          <rect x="1.5" y="1.5" width="47" height="47" rx="8.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Grupo_7688" data-name="Grupo 7688" transform="translate(1111.981 739.867)">
+        <line id="Linha_19" data-name="Linha 19" x2="20.038" y2="20.038" transform="translate(0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+        <line id="Linha_20" data-name="Linha 20" y1="20.038" x2="20.038" transform="translate(0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+      </g>
+    </g>
+  </g>
+</svg>

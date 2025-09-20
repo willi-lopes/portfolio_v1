@@ -1,0 +1,10 @@
+mixin interaction-header(template)
+  - var classH = 'hamburguerAtivo';
+  if (template.hamburguer == false)
+    - classH = '';
+
+  - var classAll = template.class + " " + classH;
+
+  .component-template-header(id!=template.id, class!=classAll)
+     +control-elements(template.data)
+     block

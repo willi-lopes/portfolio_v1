@@ -1,0 +1,92 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.component-template-header {
+  position: relative;
+  background-color: #fff;
+
+  width: 100%;
+  height: 3rem;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.fixedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  @media @ie11 {
+    .first-child {
+      flex: 1;
+    }
+  }
+
+  label {
+    font-size: 2rem;
+    width: 2rem;
+    display: none;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  .container-menu-list {
+    display: flex;
+
+    @media @ie11 {
+      margin-left: auto;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    button {
+      border: none;
+      padding: 0;
+      background: transparent;
+      all: unset;
+      cursor: pointer;
+    }
+  }
+
+  &.hamburguerAtivo {
+    @media (max-width: @tablet) {
+      label {
+        display: block;
+        cursor: pointer;
+        z-index: 99999999;
+      }
+
+      .container-menu-list {
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+
+        a {
+          display: block;
+          margin: 0;
+          width: 100vw;
+        }
+      }
+
+      #toggle:checked + .container-menu-list {
+        display: flex;
+      }
+    }
+  }
+}

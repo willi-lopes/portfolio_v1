@@ -1,0 +1,371 @@
+extends ../../templates/page/page-base.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    body(prev-hide, next-hide, header-hide)
+        .bg_01
+        .onePage 
+
+            section.sec01.bg_02
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+
+                    columns:[
+
+                        {
+                            type: 'wide',
+                            col:[
+                                {
+                                    type: 'class',
+                                    resource: ''
+                                },
+
+                                                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'bg_titulo.png',
+                                    class: ' media_01',
+                                    alt: ''
+                                  }
+                                },
+
+
+                            ]
+                        },
+
+                    ]
+                })
+
+           
+           
+            section.sec00 
+                +template-wildcard({
+                  bg: '',
+                  video: '',
+                  class: '',
+                  columns: [
+                    {
+                      col:[
+                        {
+                          type: 'class',
+                          resource: ''
+                        },
+                        {
+                                  type: 'title',
+                                  resource: {
+                                    content: 'Projetos Autorais',
+                                    class: 'color-01'
+                                  }
+                                },
+
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: '',
+                                    src: 'risca_01.png',
+                                    class: 'prop-w-porc40 prop-tablet-w-porc90',
+                                    alt: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Abaixo, apresento alguns trabalhos autorais que desenvolvi como forma de explorar criatividade, técnicas e narrativas fora do escopo comercial.',
+                                    class: ''
+                                  }
+                                },
+                      ],
+                    }
+                  ]
+                })
+            section.sec02
+                +template-wildcard({
+                    bg: '',
+                    class: 'prop-pt5',
+                    columns:[
+                        {
+                            type: '',
+                            col:[
+                              {
+                                type: 'image',
+                                resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'img_13.png',
+                                  class: 'prop-w-porc90 prop-mt1',
+                                  alt: ''
+                                }
+                              },
+                                
+                            ]
+                        },
+                        {
+                            type: '',
+                            col:[
+                                
+
+                                {
+                                  type: 'subtitle',
+                                  resource: {
+                                    class: 'color-02 prop-pt3',
+                                    content: 'Bagunça Organizada - Site de animações',
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Este é meu projeto mais antigo e uma das criações das quais mais me orgulho. Nele escrevo as histórias, dou voz aos personagens principais (Ratão, Auxiliar-man e Jadiuson), animo todas as cenas e cuido da sonoplastia. ',
+                                    class: ' '
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'É um trabalho completamente autoral, que reúne diferentes áreas da minha criação e me permitiu experimentar com narrativa, humor e linguagem audiovisual.',
+                                    class: ''
+                                  }
+                                },
+
+                                
+                            ]
+                        },
+
+                    ]
+                })
+            
+            
+            section.sec04 
+              +template-wildcard({
+                bg: '',
+                video: '',
+                class: '',
+                columns: [
+                  {
+                    col:[
+                      {
+                        type: 'class',
+                        resource: 'prop-flex-align-center prop-txt-center'
+                      },
+                                                      {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/v6gVlMI_v7I?si=yAfsOBu93TYp8GMt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+
+                    ],
+                  },
+                  {
+                    col:[
+                      {
+                        type: 'class',
+                        resource: 'prop-flex-align-center prop-txt-center'
+                      },
+                                {
+                                    type: 'free',
+                                    resource: {
+                                        class: 'util-image-center prop-pt2',
+                                        content:
+                                        `
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YKBI2TGD7kE?si=2TgT1NpMlRIEyjSN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        `
+                                    }
+                                },
+                    ],
+                  }
+                ]
+              })
+            
+
+            section.risco 
+              +template-wildcard({
+                bg: '',
+                video: '',
+                class: '',
+                columns: [
+                  {
+                    col:[
+                      {
+                        type: 'class',
+                        resource: 'prop-flex-align-center prop-txt-center'
+                      },
+                          {
+                              type: 'image',
+                              resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'risco_02.png',
+                                  class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                  alt: ''
+                              }
+                          },
+                    ],
+                  }
+                ]
+              })
+
+            section.sec05
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+                                
+
+                                {
+                                  type: 'subtitle',
+                                  resource: {
+                                    class: 'color-02 ',
+                                    content: 'Jogo - Catch me!',
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Projeto de jogo mobile: remake de Keystone Kapers (Atari)',
+                                    class: ' '
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Este projeto pessoal de remake do clássico jogo Keystone Kapers foi uma iniciativa onde atuei na criação integral dos elementos visuais, incluindo:',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'ul',
+                                  class: 'prop-pt1', 
+                                  resource: {
+                                    content: [
+                                      {
+                                        li: 'Design de personagens e cenários: reinterpretação visual moderna mantendo a essência do jogo original;',
+                                        class: '', 
+                                      },
+                                                                            {
+                                        li: 'UI/UX e elementos de jogabilidade: desenvolvimento de interfaces e assets adaptados para mobile;',
+                                        class: '', 
+                                      },
+                                                                            {
+                                        li: 'Direção de arte unificada: garantia de coerência visual em todos os componentes do jogo.',
+                                        class: '', 
+                                      },
+                                    ]
+                                  }
+                                },
+
+                                
+                            ]
+                        },
+                        {
+                            type: '',
+                            col:[
+                              {
+                                type: 'image',
+                                resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'status.gif',
+                                  class: 'prop-w-porc50 prop-mt1',
+                                  alt: ''
+                                }
+                              },
+                                
+                            ]
+                        },
+
+                    ]
+                })
+            section.sec06
+                +template-wildcard({
+                    bg: '',
+                    class: 'prop-pt5',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+                                
+                              {
+                                type: 'image',
+                                resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'game_final.jpg',
+                                  class: 'prop-w-porc100 prop-mt1',
+                                  alt: ''
+                                }
+                              },
+                                
+
+                                
+                            ]
+                        },
+                        {
+                            type: '',
+                            col:[
+                              {
+                                type: 'image',
+                                resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'capa.jpg',
+                                  class: 'prop-w-porc100 prop-mt1',
+                                  alt: ''
+                                }
+                              },
+                                
+                            ]
+                        },
+
+                    ]
+                })
+            
+            section.sec03 
+                +template-wildcard({
+                  bg: '',
+                  video: '',
+                  class: '',
+                  columns: [
+                    {
+                      col:[
+                        {
+                          type: 'class',
+                          resource: 'prop-flex-align-center prop-txt-center'
+                        },
+                        {
+                                    type: 'button',
+                                    resource: {
+                                    alt: 'button',
+                                    class: 'btn01 prop-w-porc20 prop-tablet-w-porc40 prop-m5 ',
+                                    attr:{
+                                        onClick:"navigate.goto('tela01-index')"
+                                    },
+                                    content: [
+                                        {
+                                        type: 'subtext',
+                                        resource: {
+                                            content: 'Voltar',
+                                            class: 'color-01 prop-txt-bold prop-p1'
+                                        }
+                                        },
+
+                                    ]
+                                    }
+                            },
+                      ],
+                    }
+                  ]
+                })
+
+
+
+
+block scripts
+    script(src="script.js")

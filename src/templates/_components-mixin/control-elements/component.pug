@@ -1,0 +1,179 @@
+mixin control-elements(els)
+  - if(Array.isArray(els) && els.length)
+    each el in els
+      +elm(el)
+        block
+
+mixin elm(container)
+  if (container.type == "bigtitle" || container.type == "bigTitle")
+    - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+    - var ariaHidden = (container.resource.tabInactive) ? true : false
+    h1.bigtitle(class!=container.resource.class, tabindex=tabInactive, aria-hidden=ariaHidden)&attributes((container.resource.attr) ? container.resource.attr : '')!= container.resource.content
+
+  if (container.type == "title" || container.type == "Title")
+    - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+    - var ariaHidden = (container.resource.tabInactive) ? true : false
+    h2.title(class!=container.resource.class, tabindex=tabInactive, aria-hidden=ariaHidden)&attributes((container.resource.attr) ? container.resource.attr : '')!= container.resource.content
+
+  if (container.type == "subtitle" || container.type == "subTitle")
+    - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+    - var ariaHidden = (container.resource.tabInactive) ? true : false
+    h3.subtitle(class!=container.resource.class, tabindex=tabInactive, aria-hidden=ariaHidden)&attributes((container.resource.attr) ? container.resource.attr : '')!= container.resource.content
+
+  if (container.type == "text" || container.type == "Text")
+    - if(container.resource.content.indexOf('<p') != -1)
+      - var classTxt = (container.resource.class) ? container.resource.class : ''
+      - var tabInactiveTxt = (container.resource.tabInactive) ? -1 : acessib_count++
+      - var ariaHiddenTxt = (container.resource.tabInactive) ? true : false
+      - var text = container.resource.content.replace( /<p/g, `<p aria-hidden=${ariaHiddenTxt} tabindex=${tabInactiveTxt} class="text ${classTxt}" `)
+      !=text
+    - else
+      - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+      - var ariaHidden = (container.resource.tabInactive) ? true : false
+      p.text(class!=container.resource.class, tabindex=tabInactive, aria-hidden=ariaHidden)&attributes((container.resource.attr) ? container.resource.attr : '')!= container.resource.content
+
+  if (container.type == "ul" || container.type == "Ul" || container.type == "UL")
+    ul.container-ul(class!=container.class)&attributes((container.resource.attr) ? container.resource.attr : '')
+      each tl in container.resource.content
+        - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+        - var ariaHidden = (container.resource.tabInactive) ? true : false
+        li(class!=tl.class, tabindex=tabInactive, aria-hidden=ariaHidden)&attributes((tl.attr) ? tl.attr : '')!=tl.li
+
+  if (container.type == "smalltext" || container.type == "smallText" || container.type == "subtext" || container.type == "subText")
+    - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+    - var ariaHidden = (container.resource.tabInactive) ? true : false
+    p.smalltext(class!=container.resource.class, tabindex=tabInactive, aria-hidden=ariaHidden)&attributes((container.resource.attr) ? container.resource.attr : '')!= container.resource.content
+
+  if (container.type == "image")
+    - var classContainer = (container.resource.classContainer) ? container.resource.classContainer : '';
+    .container-image( class!=classContainer )
+      - var filename = (container.resource.src.indexOf('/') != -1) ? container.resource.src : "../../assets/img/"+container.resource.src;
+      - var classes = (container.resource.class) ? container.resource.class : '';
+      - var alt = (container.resource.alt ? container.resource.alt : '' )
+      - var tabindex = (container.resource.alt ? acessib_count++ : -1 )
+      - var ariaHidden = (!container.resource.alt) ? true : false
+      img(src=filename, class!=classes, alt=alt, aria-label=alt, tabindex=tabindex, aria-hidden=ariaHidden )&attributes((container.resource.attr) ? container.resource.attr : '')
+
+  if (container.type == "video")
+    - var classContainer = (container.resource.classContainer) ? container.resource.classContainer : '';
+    .container-video( class!=classContainer )
+      - var filename = (container.resource.src.indexOf('/') != -1) ? container.resource.src : "../../assets/video/"+container.resource.src;
+      - var classes = (container.resource.class) ? container.resource.class : '';
+      - var alt = (container.resource.alt ? container.resource.alt : '' )
+      - var tabindex = (container.resource.alt ? acessib_count++ : -1 )
+      - var ariaHidden = (!container.resource.alt) ? true : false
+      video(controlslist="nodownload", src=filename, class!=classes, alt=alt, aria-label=alt, tabindex=10, aria-hidden=ariaHidden )&attributes((container.resource.attr) ? container.resource.attr : '')
+
+  if (container.type == "audio")
+    - var classContainer = (container.resource.classContainer) ? container.resource.classContainer : '';
+    .container-audio( class!=classContainer )
+      - var filename = (container.resource.src.indexOf('/') != -1) ? container.resource.src : "../../assets/audio/"+container.resource.src;
+      - var classes = (container.resource.class) ? container.resource.class : '';
+      - var alt = (container.resource.alt ? container.resource.alt : '' )
+      - var tabindex = (container.resource.alt ? acessib_count++ : -1 )
+      - var ariaHidden = (!container.resource.alt) ? true : false
+      audio(src=filename, class!=classes, alt=alt, aria-label=alt, tabindex=tabindex, aria-hidden=ariaHidden )&attributes((container.resource.attr) ? container.resource.attr : '')
+
+  if (container.type == "iframe")
+    - var classContainer = (container.resource.classContainer) ? container.resource.classContainer : '';
+    .container-iframe( class!=classContainer )
+      - var filename = (container.resource.src.indexOf('/') != -1) ? container.resource.src : "../../assets/iframe/"+container.resource.src;
+      - var classes = (container.resource.class) ? container.resource.class : '';
+      - var alt = (container.resource.alt ? container.resource.alt : '' )
+      - var tabindex = (container.resource.alt ? acessib_count++ : -1 )
+      - var ariaHidden = (!container.resource.alt) ? true : false
+      iframe(src=filename, class!=classes, alt=alt, aria-label=alt, tabindex=tabindex, aria-hidden=ariaHidden )&attributes((container.resource.attr) ? container.resource.attr : '')
+
+  if (container.type == "button")
+    - var classContainer = (container.resource.classContainer) ? container.resource.classContainer : '';
+    .container-btn( class!=classContainer )
+      - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+      - var ariaHidden = (container.resource.tabInactive) ? true : false
+      button.botao(
+        tabindex=tabInactive,
+        aria-hidden=ariaHidden,
+        aria-label=container.resource.alt,
+        data-modal=container.resource.activeModal,
+        class=container.resource.class
+      )&attributes((container.resource.attr) ? container.resource.attr : '')
+        +control-elements(container.resource.content)
+
+  if (container.type == "link")
+    - var classContainer = (container.resource.classContainer) ? container.resource.classContainer : '';
+    .container-link( class!=classContainer )
+      - var tabInactive = (container.resource.tabInactive) ? -1 : acessib_count++
+      - var ariaHidden = (container.resource.tabInactive) ? true : false
+      a(
+        tabindex=tabInactive,
+        aria-hidden=ariaHidden,
+        aria-label=container.resource.alt,
+        class=container.resource.class,
+        href=container.resource.href,
+        target!=container.resource.target,
+        download!=container.resource.download
+      )&attributes((container.resource.attr) ? container.resource.attr : '')
+        +control-elements(container.resource.content)
+
+  if (container.type == "free")
+    .freeBox(class!=container.resource.class)!=container.resource.content
+  
+  if (container.type == "svg_to_js" || container.type == "svg" )
+    .svgBase(
+        class!=container.resource.class,
+        svgPath!=container.resource.path)
+
+  if (container.type == "magnet")
+    .magnet(
+        class!=container.resource.class,
+        magnetClass!=container.resource.magnetClass,
+        order!=container.resource.order)!=container.resource.content
+
+  if (container.type == "boxInfo" || container.type == "guide" )
+    .boxInfo.guide(class!=container.resource.class)
+      +control-elements(container.resource.content)
+
+  if (container.type == "card")
+    - var style_bg = ''
+    each elem in container.resource.content
+      if (elem.type == "background")
+        - var col_bg_url = '../../assets/img/' + elem.resource.src;
+        - style_bg = `background-image: url(${col_bg_url});`;
+    .container-item-card(style!=style_bg,class!=container.resource.class)&attributes((container.resource.attr) ? container.resource.attr : '')
+      +control-elements(container.resource.content)
+
+  if (container.type == "holder")
+    - var style_bg = ''
+    each elem in container.resource.content
+      if (elem.type == "background")
+        - var col_bg_url = '../../assets/img/' + elem.resource.src;
+        - style_bg = `background-image: url(${col_bg_url});`;
+    .container-holder(style!=style_bg,class!=container.resource.class)&attributes((container.resource.attr) ? container.resource.attr : '')
+      +control-elements(container.resource.content)
+
+  if (container.type == "line")
+    .container-line(class!=container.class, dimensions!='dimensions-'+container.dimensions)&attributes((container.resource.attr) ? container.resource.attr : '')
+      each tl in container.resource
+        - if(tl.fraction == 'minor')
+          - var classM = '';
+            each elem in tl.content
+                if (elem.type == "class")
+                    - classM = elem.resource;
+          .line-minor(class!=classM)
+            +control-elements(tl.content)
+        - if(tl.fraction == 'major')
+          - var classF = '';
+            each elem in tl.content
+                if (elem.type == "class")
+                    - classF = elem.resource;
+          .line-major(class!=classF)
+            +control-elements(tl.content)
+
+  if (container.type == "list")
+    .container-list(class!=container.class)&attributes((container.resource.attr) ? container.resource.attr : '')
+      each item, i in container.resource
+        - var it = i + 1;
+        - var itArray = [item];
+        +control-elements(itArray)
+
+  +control-components( container )
+    block

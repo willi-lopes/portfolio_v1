@@ -1,0 +1,178 @@
+mixin control-wildcard(container)
+
+  - var containerCol = {};
+
+  //- Converter o padrão antigo col1 e col2 em colunms
+  if ( container.column01 )
+    - var containerCol = {"columns":[]};
+    - var obj = {'col': container.column01 };
+    - containerCol.columns.push(obj);
+
+    if (container.column02)
+      - var obj = {'col': container.column02 };
+      - containerCol.columns.push(obj);
+
+    if ( container.bg )
+      - containerCol.bg = container.bg;
+
+  if ( container.columns )
+    - containerCol = container;
+
+  //- Verifica se tem apenas uma col regular e a transforma em col FULL
+  - var row_class ="";
+  - var row_class_status = true;
+  if ( containerCol.row && containerCol.row.class )
+    - row_class = containerCol.row.class;
+
+  - var col_unit = 0;
+  each item, indice in containerCol.columns
+    if ( !item.type || item.type == "regular" )
+      - col_unit += 1;
+
+  each item, indice in containerCol.columns
+    if ( !item.type || item.type == "regular" )
+      if ( col_unit == 1 )
+        - item.type = 'full';
+        - item.name = 'col-01';
+        - row_class_status = false;
+
+  //- Orienta se a col Wide ou Full esta antes ou depois das regulares
+  - var position = "first";
+  each item, indice in containerCol.columns
+    if ( item.type == "wide" || item.type == "full" )
+      - containerCol.custom_exists = true;
+      if ( position == "first" )
+        - position == "end";
+        - item.position = 1;
+      else
+        - item.position = 2;
+    if ( !item.type || item.type == "regular" )
+      - position == "end";
+      - item.position = 0;
+
+  //- verifica se tem coluna custon(full/wide) no começo
+  +create-col-custom(containerCol, 1)
+    block
+
+  //- se o status indicar que só tem colunas full/wide nao criará o row-wrap
+  if ( row_class_status )
+    +create-col-row(containerCol, row_class)
+      block
+
+  //- verifica se tem coluna custon(full/wide) no final
+  +create-col-custom(containerCol , 2)
+    block
+
+mixin create-col-custom(container, it)
+  //-Cria as col Wide ou Full conforme sua ordem
+  //-Caso a col seja do tipo Full mas de origem Col-01 ela será mantida com o nome Col-01 para controle do block do modal block ref-column01
+  each item, indice in container.columns
+    if ( item.position == it )
+      if ( item.type == "wide" )
+        - item.name = "col-wide"+ item.position;
+        +create-col(container, item)
+          block
+      if ( item.type == "full" )
+        if ( item.name != "col-01" )
+          - item.name = "col-full" + item.position;
+        +create-col(container, item)
+          block
+
+
+
+mixin create-col-row(container, row_class)
+  .row-wrap(class!=row_class)
+    - var col_regular = 0;
+
+    each item, indice in container.columns
+      if ( !item.type || item.type == "regular" )
+        - col_regular +=1;
+        - item.type = "regular";
+        - item.name = "col-0"+col_regular;
+      else if ( item.type != "full" && item.type != "wide" )
+        - item.name = "col-"+item.type;
+
+    each item, indice in container.columns
+      if ( item.type != "full" && item.type != "wide" )
+        +create-col(container, item)
+          block
+//- cria as colunas novas
+mixin create-col(container, item)
+  - var col_zero = ( item.col.length <= 0 ) ? 'col-zero' : '';
+  - var col_custom = ( container.custom_exists ) ? 'col-exists-full' : '';
+  - var col_one = '';
+  - var col_full = '';
+  - var col_wide = '';
+  - var col_class = '';
+  - var col_bg_url = '';
+  - var style_bg = '';
+  - var class_bg = '';
+  - var bg_status = false;
+  - var bg_status_full = false;
+  - var alt_bg;
+
+  if (container.columns)
+    - col_one = ( container.columns.length == 1 ) ? 'col-one' : '';
+
+  if (container.bg)
+    - class_bg = 'col-bg';
+
+  each elem in item.col
+    if (elem.type == "class")
+      - col_class = elem.resource;
+    if (elem.type == "background")
+      - bg_status = true;
+      - if(elem.resource.src)
+        - col_bg_url = '../../assets/img/' + elem.resource.src;
+        - style_bg = `background-image: url(${col_bg_url});`;
+      - else if(elem.resource.color)
+        - col_bg_url = elem.resource.color;
+        - style_bg = `background: ${col_bg_url};`;
+
+      - class_bg = 'col-bg';
+      - if(elem.resource.alt)
+        - alt_bg = elem.resource.alt;
+      - if(elem.resource.class)
+        - class_bg = elem.resource.class;
+
+  if (item.type == 'wide')
+    - col_wide = "col-wide";
+    - col_custom = '';
+
+  if (item.type == 'full')
+    - col_full = "col-full";
+    - bg_status_full = (bg_status) ? true : false;
+    - bg_status = false;
+    - col_custom = '';
+
+  - var class_all = class_bg + " " + col_custom + " " + col_zero + " "+ col_one + " " + item.name + " " + col_wide + " " + col_full + " " + col_class;
+
+  .col(
+    style!=bg_status_full?style_bg:'',
+    class!=class_all,
+    alt=alt_bg ? alt_bg : '',
+    aria-label=alt_bg ? alt_bg : '',
+    tabindex=alt_bg ? acessib_count++ : -1
+  )&attributes((item.attr) ? item.attr : '')
+    if ( bg_status )
+      .col-bg-int(style=style_bg)
+
+    - var wrapper_class ="";
+    if ( item.wrapper )
+      - wrapper_class = item.wrapper.class ? item.wrapper.class : '';
+
+    .wrapper(class!=wrapper_class)
+      +control-elements(item.col)
+        block
+        if ( item.name.indexOf('col-01') != -1 )
+          +block('col-01', true)
+        if ( item.name.indexOf('col-02') != -1 )
+          +block('col-02', true)
+        if ( item.name == 'col-wide1' )
+          +block('col-wide1', true)
+        if ( item.name == 'col-wide2' )
+          +block('col-wide2', true)
+        if ( item.name == 'col-full1' )
+          +block('col-full1', true)
+        if ( item.name == 'col-full2' )
+          +block('col-full2', true)

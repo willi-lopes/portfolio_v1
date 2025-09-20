@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <filter id="Caminho_7163" x="0" y="0" width="55" height="55" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_8085" data-name="Grupo 8085" transform="translate(-430.167 -718.5)">
+    <g transform="matrix(1, 0, 0, 1, 430.17, 718.5)" filter="url(#Caminho_7163)">
+      <path id="Caminho_7163-2" data-name="Caminho 7163" d="M10,0H30A10,10,0,0,1,40,10V30A10,10,0,0,1,30,40H10A10,10,0,0,1,0,30V10A10,10,0,0,1,10,0Z" transform="translate(7.5 6.5)" fill="#234780"/>
+    </g>
+    <g id="Grupo_689" data-name="Grupo 689" transform="translate(447.528 734.264)">
+      <path id="Linha_19" data-name="Linha 19" d="M16.5,18.291a1.789,1.789,0,0,1-1.269-.526L-1.974.564a1.8,1.8,0,0,1,0-2.538,1.8,1.8,0,0,1,2.538,0l17.2,17.2A1.795,1.795,0,0,1,16.5,18.291Z" transform="translate(2.5 2.5)" fill="#fff"/>
+      <path id="Linha_20" data-name="Linha 20" d="M-.705,18.291a1.789,1.789,0,0,1-1.269-.526,1.8,1.8,0,0,1,0-2.538l17.2-17.2a1.8,1.8,0,0,1,2.538,0,1.8,1.8,0,0,1,0,2.538l-17.2,17.2A1.789,1.789,0,0,1-.705,18.291Z" transform="translate(2.5 2.5)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+.container-menu {
+	position: absolute;
+    top: 1em;
+    right: 1.85em;
+    width: 5em;
+    height: 5em;
+
+	.active-menu .container-icon-menu-hamburguer {
+		width: 100%;
+		right: 2em;
+	}
+	
+	.content-menu {
+		width: 54rem;
+
+		.list-items {
+			width: 100%;
+			max-width: 46em;
+			padding-top: 5em;
+	
+			.item {
+				text-align: right;
+			}
+		}
+	}
+}
+@media (max-width: @mobile) { 
+	.component-template-header .container-menu-list {
+		a::after {
+			content: "";
+			display: block;
+			border-bottom: .1rem solid @color-white;
+			margin: 1rem;
+		}
+		a:last-child::after {
+			display: none;
+		}
+	}
+}
+
+.container-interaction-arrows .container-arrow {
+	width: 3rem !important;
+	height: 3rem !important;
+
+	@media (max-width: @mobile) {
+		width: 1.8rem !important;
+		height: 3rem !important;
+		margin: 0 0.2rem;
+	}
+}
+
+@media screen and (max-width: @tablet) {
+	.container-menu .active-menu .container-icon-menu-hamburguer {
+		width: 2em;
+		height: auto;
+		margin-right: -1.6em;
+	}
+
+	.container-controll-arrows .container-arrow.container-arrow-right {
+		right: 0em!important;
+	}
+
+	.container-controll-arrows .container-arrow.container-arrow-left {
+		left: 0em!important;
+	}
+}

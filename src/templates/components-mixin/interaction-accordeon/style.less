@@ -1,0 +1,48 @@
+.interaction-accordeon {
+    .bloco {
+        width: 100%;
+    }
+    .corpbtn {
+        position: relative;
+        margin: .5em 0 0;
+        button.accordeon-title {	
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0005;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+            margin: 0;
+            border-radius: 0;
+            h3, h4 {
+                margin: 0;
+            }		
+            .img {
+                transform: rotate(90deg);
+                transition-duration: .5s;
+                background-image: url(../../assets/img/seta_accordeon.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 3rem;
+                height: 2.5rem;
+            }
+        }
+        button.accordeon-title.is-opened {
+            .img {
+                transform: rotate(-90deg);
+                transition-duration: .5s;
+            }
+        }
+        button.accordeon-title:hover {
+            opacity: .7;
+        }
+        .accordeon-texto {
+            display: none;
+            padding: 1rem;
+            background-color: rgb(201, 201, 201);
+        }
+    }
+}

@@ -1,0 +1,63 @@
+mixin exercise-drag-drop(template)
+	- acessib_count = 1;
+	.exercise-drag-drop.container-exercise-base(id!=template.id,
+											class!=template.class,
+											repeat!=template.repeat,
+											cache!=template.cache,
+											random!=template.random,
+											peso!=template.peso,
+											relacionar!=template.relacionar,
+											featuredClass!=template.featuredClass,
+											maxItensInAlvo!=template.maxItensInAlvo,
+											standardBtn!=template.confirm.standerd,
+											repeatBtn!=template.confirm.repeat,
+											cacheBtn!=template.confirm.cache,
+											infoClass!=template.infoCustom.class,
+											infoTxt!=template.infoCustom.text,
+											)
+		.colunas
+			.coluna.col-itens
+				each content in template.itens
+					.container-item( aria-label!=content.ariaLabel, tabindex!=acessib_count++)
+						each item in content.resource
+							if item.type == 'block'
+								.block(class!=item.class)
+									+control-elements(item.content)
+							else
+								- var style_bg = ''
+								each elem in item.content
+									if (elem.type == "background")
+										- var col_bg_url = '../../assets/img/' + elem.resource.src;
+										- style_bg = `background-image: url(${col_bg_url});`;
+
+								button.item-select.dragDrop_element(aria-hidden="true",
+																										style!=style_bg,
+																										class!=item.class,
+																										arraste!=item.arraste)
+									+control-elements(item.content)
+
+			.coluna.col-alvo
+				each content in template.alvos
+					.container-alvo(aria-label!=content.alt, tabindex!=acessib_count++)
+						each item in content.resource
+							if item.type == 'block'
+								.block(class!=item.class)
+									+control-elements(item.content)
+							else
+								- var alvoArray = item.alvo;
+								- var alvo = "";
+								if alvoArray.length == 1
+									- alvo = alvoArray[0]
+								else
+									each val,indice in alvoArray
+										if alvoArray.length != indice + 1
+											- alvo += val + "|"
+										else
+											- alvo += val
+
+								.alvo-select.dragDrop_element(class!=item.class, alvo!=((alvo != "") ? alvo : 0) )
+
+		.footer
+			.container-btn.wrapper-button
+				button.confirmar.button-confirm.hide(tabindex=acessib_count++,class!=template.confirm.class)!="Confirmar"
+		block

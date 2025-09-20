@@ -1,0 +1,27 @@
+[
+	{
+		"pt-br": {
+			"link01": {
+				"href": "https://www.afferolab.com.br/",
+                "class": "",
+                "ariaLabel": "Site Affero PT"
+			}
+		},
+
+		"en-us": {
+			"link01": {
+				"href": "https://www.afferolab.com.br/en",
+                "class": "",
+                "ariaLabel": "Site Affero EN"
+			}
+		},
+
+		"es": {
+			"link01": {
+				"href": "https://www.afferolab.com.br/es",
+                "class": "",
+                "ariaLabel": "Site Affero ES"
+			}
+		}
+	}
+]

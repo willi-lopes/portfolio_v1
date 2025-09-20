@@ -1,0 +1,36 @@
+.container-line {
+    align-items: initial;
+
+    @media (max-width: @tablet) {
+        padding: 2rem;
+    }
+
+    .line-minor {
+
+        @media (max-width: @tablet) {
+            width: 100%;
+        }
+
+        .container-image {
+            display: flex;
+            height: 100%;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .line-major {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem;
+
+        @media (max-width: @tablet) {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}

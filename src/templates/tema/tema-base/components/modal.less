@@ -1,0 +1,96 @@
+.modal {
+    background-image: url(../../assets/img/bgmodal.jpg);
+    background-size: cover;
+
+    // Modal comum
+    &.modal-comum {
+        .flex-center {
+            .box {
+                background-color: @color-black;
+                width: 70%;
+                max-width: @desktop;
+                // padding: 4rem 3rem 3rem;
+                @media (max-width: @tablet) {
+                    width: 100%;
+                    // padding: 4rem 2rem 2rem;
+                }
+                .modal-close {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                .container-template-wildcard {
+                    .row-wrap {
+                        justify-content: space-between;
+                        .col-01 {
+                            width: calc(50% - 1rem);
+                            @media (max-width: @tablet) {
+                                width: 100%;
+                            }
+                        }
+                        .col-02 {
+                            width: calc(50% - 1rem);
+                            @media (max-width: @tablet) {
+                                width: 100%;
+                                margin: 2rem 0 0;
+                            }
+                        }
+                        .col {
+                            .wrapper {
+                                .container-image {
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // Modal de feedback
+    &.feedback {
+        .flex-center {
+            .box {
+                background-color: @color-black;
+                width: 35rem;
+                .modal-close {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                .container-template-wildcard {
+                    .col {
+                        .wrapper {
+                            padding: 4rem 3rem 3rem !important;
+                            @media (max-width: @tablet) {
+                                padding: 4rem 2rem 2rem !important;
+                            }
+                            .container-line {
+                                @media (max-width: @tablet) {
+                                    padding: 0;
+                                }
+                                .line-major {
+                                    padding: 0;
+                                    width: 75%;
+                                    @media (max-width: @tablet) {
+                                        width: 70% !important;
+                                    }
+                                }
+                                .line-minor {
+                                    width: 25%;
+                                    @media (max-width: @tablet) {
+                                        width: 30% !important;
+                                    }
+                                    .container-image {
+                                        img {
+                                            object-fit: contain;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

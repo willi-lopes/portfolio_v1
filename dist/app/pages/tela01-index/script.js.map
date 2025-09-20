@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["events","on"],"mappings":"AAAAA,OAAOC,GAAG,QAAS,YAElB","file":"script.js","sourcesContent":["events.on('ready', function() {\r\n    \r\n});"]}

@@ -1,0 +1,147 @@
+.container-image {
+  position: relative;
+
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.container-video {
+  position: relative;
+
+  video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.container-audio {
+  position: relative;
+
+  audio {
+    position: relative;
+  }
+}
+
+.container-iframe {
+  position: relative;
+
+  iframe {
+    position: relative;
+    width: 100%;
+    min-height: 20rem;
+  }
+}
+
+.container-btn {
+  position: relative;
+  width: 100%;
+}
+
+.container-item-card {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-list {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: initial;
+  flex-wrap: wrap;
+
+  & > div {
+    width: 30%;
+    @media screen and (max-width: @tablet) {
+      width: 100%;
+    }
+  }
+}
+
+.container-line {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: @tablet) {
+    justify-content: center;
+  }
+
+  .line-minor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    @media screen and (max-width: @tablet) {
+      width: 100% !important;
+    }
+  }
+
+  .line-major {
+    position: relative;
+    width: 75%;
+    @media screen and (max-width: @tablet) {
+      width: 100% !important;
+    }
+  }
+
+  &[dimensions="dimensions-25-70"] {
+    .line-minor {
+      width: 25%;
+    }
+    .line-major {
+      width: 70%;
+    }
+  }
+
+  &[dimensions="dimensions-30-65"] {
+    .line-minor {
+      width: 30%;
+    }
+    .line-major {
+      width: 65%;
+    }
+  }
+
+  &[dimensions="dimensions-35-60"] {
+    .line-minor {
+      width: 35%;
+    }
+    .line-major {
+      width: 60%;
+    }
+  }
+
+  &[dimensions="dimensions-40-55"] {
+    .line-minor {
+      width: 40%;
+    }
+    .line-major {
+      width: 55%;
+    }
+  }
+
+  &[dimensions="dimensions-45-50"] {
+    .line-minor {
+      width: 45%;
+    }
+    .line-major {
+      width: 50%;
+    }
+  }
+}

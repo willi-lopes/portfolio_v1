@@ -1,0 +1,46 @@
+
+.interaction-image-mapping {
+  position: relative;
+  width: 100%;
+
+  .image-mapping-base {
+    position: relative;
+    min-height: 8rem;
+    display: none;
+
+    .image-mapping-info {
+      position: relative;
+      width: 100%;
+      background-color: red;
+      padding: 1rem;
+      display: none;
+    }
+  }
+
+  .image-mapping-container {
+    position: relative;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: relative;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .image-mapping-pin {
+      all: unset;
+      position: absolute;
+      cursor: pointer;
+      display: none;
+
+      * {
+        min-width: auto !important;
+        max-width: auto !important;
+      }
+    }
+  }
+}

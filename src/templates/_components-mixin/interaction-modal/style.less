@@ -1,0 +1,67 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .flex-center {
+    // overflow: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+    @media @ie11 {
+      height: 100vh !important;
+    }
+
+    @media screen and (max-width: @mobile) {
+      width: 95%;
+    }
+
+    .box {
+      width: 65%;
+      height: auto;
+      max-height: 95vh;
+      overflow-y: auto;
+      background-color: blue;
+      position: relative;
+
+      @media screen and (max-width: @tablet) {
+        width: 80%;
+      }
+      @media screen and (max-width: @mobile) {
+        width: 100%;
+      }
+
+      .modal-close,
+      .modal-close-feed {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        background-image: url(../../assets/img/btn-close.svg);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: 0.35s opacity ease-in-out;
+        z-index: 999999999999999;
+        border: 0;
+      }
+    }
+  }
+}

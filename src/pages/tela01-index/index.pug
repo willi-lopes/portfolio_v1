@@ -1,0 +1,541 @@
+extends ../../templates/page/page-base.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    body(prev-hide, next-hide)
+        .bg_01
+        .onePage 
+
+            section.sec01.bg_02
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+
+                    columns:[
+
+                        {
+                            type: 'wide',
+                            col:[
+                                {
+                                    type: 'class',
+                                    resource: ''
+                                },
+
+                                                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'bg_titulo.png',
+                                    class: ' media_01',
+                                    alt: ''
+                                  }
+                                },
+
+
+                            ]
+                        },
+
+                    ]
+                })
+
+            
+
+
+
+            section.sec02#ponto01.prop-mb5
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+                        {
+                            type: '01-30',
+                            col:[
+                                {
+                                    type: 'class',
+                                    resource: ''
+                                },
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'icon_01.gif',
+                                    class: 'prop-w-porc90 prop-mt1 left',
+                                    alt: ''
+                                  }
+                                },
+                            ]
+                        },
+                        {
+                            type: '02-70',
+                            col:[
+                                {
+                                  type: 'title',
+                                  resource: {
+                                    content: 'Quem sou eu?',
+                                    class: 'color-01 right'
+                                  }
+                                },
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: '',
+                                    src: 'risca_01.png',
+                                    class: 'prop-w-porc40 prop-tablet-w-porc90 right',
+                                    alt: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Olá, meu nome é <b>Willi Lopes</b>.',
+                                    class: 'prop-pt1 '
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Com mais de 20 anos de experiência em design, reuni aqui meus trabalhos mais emblemáticos — um compilado da expertise adquirida em projetos diversificados, desde motion design e criação de apresentações (PowerPoint) até diagramação de materiais interativos (PDFs, HTML).',
+                                    class: 'right'
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Contato e Rede sociais ',
+                                    class: 'right'
+                                  }
+                                },
+                                {
+                                  type: 'line',
+                                  class: 'right',
+                                  dimensions: '15-80',
+                                  resource: [
+                                    {
+                                      fraction: 'minor',
+                                      content: [
+                                            {
+                                                type: 'image',
+                                                resource: {
+                                                classContainer: 'util-image-center',
+                                                src: 'ico_01.png',
+                                                class: 'prop-w5 ',
+                                                alt: ''
+                                                }
+                                            },
+                                      ]
+                                    },
+                                    {
+                                      fraction: 'major',
+                                      content:[
+                                          
+                                            {
+                                                type: 'link',
+                                                resource: {
+                                                    alt: 'link saiba mais',
+                                                    href: 'mailto:willi.lopes@gmail.com',
+                                                    target: '_blank',
+                                                    class: '  center-left',
+                                                    content: [
+
+                                                        {
+                                                            type: 'text',
+                                                            resource: {
+                                                                content: 'willi.lopes@gmail.com',
+                                                                class: '',
+                                                            }
+                                                        },
+                                                    ]
+                                                }
+                                            },
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  type: 'line',
+                                  class: 'right',
+                                  dimensions: '15-80',
+                                  resource: [
+                                    {
+                                      fraction: 'minor',
+                                      content: [
+                                            {
+                                                type: 'image',
+                                                resource: {
+                                                classContainer: 'util-image-center',
+                                                src: 'ico_02.png',
+                                                class: 'prop-w5 ',
+                                                alt: ''
+                                                }
+                                            },
+                                      ]
+                                    },
+                                    {
+                                      fraction: 'major',
+                                      content:[
+                                          
+                                                {
+                                                    type: 'link',
+                                                    resource: {
+                                                        alt: 'instagrams',
+                                                        href: 'https://www.instagram.com/willi_mesmo',
+                                                        target: '_blank',
+                                                        class: 'center-left ',
+                                                        content: [
+
+                                                            {
+                                                                type: 'text',
+                                                                resource: {
+                                                                    content: 'Instagram/willi_mesmo',
+                                                                    class: '',
+                                                                }
+                                                            },
+                                                        ]
+                                                    }
+                                                },
+                                      ]
+                                    }
+                                  ]
+                                },
+
+
+
+                            ]
+                        },
+                    ]
+                })
+
+            section.sec03#ponto02.full-H
+                +template-wildcard({
+                    bg: '',
+                    class: 'line_blue',
+                    columns:[
+
+                        {
+                            col:[
+                                {
+                                    type: 'class',
+                                    resource: ''
+                                },
+                                {
+                                    type: 'title',
+                                    resource: {
+                                        content: 'Trabalhos',
+                                        class: 'color-01 prop-tablet-pt2'
+                                    }
+                                },
+                                {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: '',
+                                        src: 'risca_01.png',
+                                        class: ' prop-w-porc30 prop-tablet-w-porc90',
+                                        alt: ''
+                                    }
+                                },
+                                {
+                                    type: 'text',
+                                    resource: {
+                                        content: 'Com experiência multidisciplinar em design e produção, organizei meus projetos por categorias para facilitar a navegação:',
+                                        class: 'prop-pb3 prop-pt1'
+                                    }
+                                },
+
+                                {
+                                    type: 'line',
+                                    class: 'prop-pb2 prop-pt2',
+                                    dimensions: '25-70',
+                                    resource: [
+                                        {
+                                            fraction: 'minor',
+                                            content: [
+                                                {
+                                                    type: 'image',
+                                                    resource: {
+                                                        classContainer: 'util-image-center',
+                                                        src: 'icon_02.gif',
+                                                        class: ' prop-w-porc60 prop-tablet-w-porc100 prop-mt1 prop-tablet-p1',
+                                                        alt: ''
+                                                    }
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            fraction: 'major',
+                                            content:[
+                                                {
+                                                    type: 'subtitle',
+                                                    resource: {
+                                                        content: 'Motion Design & Animação',
+                                                        class: 'color-02 prop-tablet-pt2  txt-center'
+                                                    }
+                                                },
+                                                {
+                                                    type: 'text',
+                                                    resource: {
+                                                        content: 'Seleção de trabalhos profissionais em motion graphics e animação, com foco em narrativas dinâmicas para marcas e conteúdo digital.',
+                                                        class: 'txt-center'
+                                                    }
+                                                },
+                                                {
+                                                    type: 'button',
+                                                    resource: {
+                                                    alt: 'button',
+                                                    class: 'btn01 prop-w-porc50  prop-m1 prop-tablet-w-porc100 ',
+                                                    attr:{
+                                                        onClick:"navigate.goto('tela02-trabalhos')"
+                                                    },
+                                                    content: [
+                                                        {
+                                                        type: 'subtext',
+                                                        resource: {
+                                                            content: 'Clique para acessar os projetos',
+                                                            class: 'color-01 prop-txt-bold prop-p1'
+                                                        }
+                                                        },
+
+                                                    ]
+                                                    }
+                                                },
+                                        ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: 'util-image-center',
+                                        src: 'risco_02.png',
+                                        class: 'prop-w-porc90 prop-mt1 prop-mb1',
+                                        alt: ''
+                                    }
+                                },
+                                {
+                                    type: 'line',
+                                    class: 'prop-pb2 prop-pt2 reverse',
+                                    dimensions: '25-70',
+                                    resource: [
+
+                                        {
+                                            fraction: 'major',
+                                            content:[
+                                                {
+                                                    type: 'subtitle',
+                                                    resource: {
+                                                        content: 'Wireframes, UX/UI & Desenvolvimento HTML',
+                                                        class: 'color-02   txt-center2 '
+                                                    }
+                                                },
+                                                {
+                                                    type: 'text',
+                                                    resource: {
+                                                        content: 'Da concepção (wireframes) à entrega (HTML), projetos que destacam minha abordagem técnica e atenção à usabilidade.',
+                                                        class: ' txt-center2'
+                                                    }
+                                                },
+                                                {
+                                                  type: 'card',
+                                                  resource: {
+                                                  class: 'txt-center2',
+                                                  content: [
+                                                    {
+                                                            type: 'button',
+                                                            resource: {
+                                                            alt: 'button',
+                                                            class: 'btn01 prop-w-porc50  prop-m1 prop-tablet-w-porc100 ',
+                                                            attr:{
+                                                                onClick:"navigate.goto('tela03-trabalhos')"
+                                                            },
+                                                            content: [
+                                                                {
+                                                                type: 'subtext',
+                                                                resource: {
+                                                                    content: 'Clique para acessar os projetos',
+                                                                    class: 'color-01 prop-txt-bold prop-p1'
+                                                                }
+                                                                },
+
+                                                            ]
+                                                            }
+                                                },
+                                                    ]
+                                                  }
+                                                },
+
+                                            ]
+                                        },
+                                        {
+                                            fraction: 'minor',
+                                            content: [
+                                                {
+                                                    type: 'image',
+                                                    resource: {
+                                                        classContainer: 'util-image-center',
+                                                        src: 'icon_03.gif',
+                                                        class: ' prop-w-porc60 prop-tablet-w-porc100 prop-mt1 prop-tablet-p1',
+                                                        alt: ''
+                                                    }
+                                                },
+                                            ]
+                                        },
+                                    ]
+                                },
+                                    {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: 'util-image-center',
+                                        src: 'risco_02.png',
+                                        class: 'prop-w-porc90 prop-mt1 prop-mb1',
+                                        alt: ''
+                                    }
+                                },
+                                {
+                                    type: 'line',
+                                    class: '',
+                                    dimensions: '25-70',
+                                    resource: [
+                                        {
+                                            fraction: 'minor',
+                                            content: [
+                                                {
+                                                    type: 'image',
+                                                    resource: {
+                                                        classContainer: 'util-image-center',
+                                                        src: 'icon_04.gif',
+                                                        class: ' prop-w-porc60 prop-mt1',
+                                                        alt: ''
+                                                    }
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            fraction: 'major',
+                                            content:[
+                                                {
+                                                    type: 'subtitle',
+                                                    resource: {
+                                                        content: 'Apresentações & Materiais Interativos',
+                                                        class: 'color-02 txt-center'
+                                                    }
+                                                },
+                                                {
+                                                    type: 'text',
+                                                    resource: {
+                                                        content: 'Criação de PPTs, PDFs interativos e diagramação de telas — sempre com clareza visual e propósito estratégico.',
+                                                        class: 'txt-center'
+                                                    }
+                                                },
+                                                                                                {
+                                                    type: 'button',
+                                                    resource: {
+                                                    alt: 'button',
+                                                    class: 'btn01 prop-w-porc50 txt-center prop-m1 prop-tablet-w-porc100 ',
+                                                    attr:{
+                                                        onClick:"navigate.goto('tela04-trabalhos')"
+                                                    },
+                                                    content: [
+                                                        {
+                                                        type: 'subtext',
+                                                        resource: {
+                                                            content: 'Clique para acessar os projetos',
+                                                            class: 'color-01 prop-txt-bold prop-p1'
+                                                        }
+                                                        },
+
+                                                    ]
+                                                    }
+                                                },
+                                            ]
+                                        }
+                                    ]
+                                },
+                                    {
+                                    type: 'image',
+                                    resource: {
+                                        classContainer: 'util-image-center',
+                                        src: 'risco_02.png',
+                                        class: 'prop-w-porc90 prop-mt1 prop-mb1',
+                                        alt: ''
+                                    }
+                                },
+                                {
+                                    type: 'line',
+                                    class: 'prop-pb2 prop-pt2  reverse',
+                                    dimensions: '25-70',
+                                    resource: [
+
+                                        {
+                                            fraction: 'major',
+                                            content:[
+                                                {
+                                                    type: 'subtitle',
+                                                    resource: {
+                                                        content: 'Projetos Autorais',
+                                                        class: 'color-02 txt-center2'
+                                                    }
+                                                },
+                                                {
+                                                    type: 'text',
+                                                    resource: {
+                                                        content: 'Meu lado criativo além do profissional',
+                                                        class: 'txt-center2'
+                                                    }
+                                                },
+                                                {
+                                                  type: 'card',
+                                                  resource: {
+                                                  class: 'txt-center2',
+                                                  content: [
+                                                    {
+                                                            type: 'button',
+                                                            resource: {
+                                                            alt: 'button',
+                                                            class: 'btn01 prop-w-porc50  prop-m1 prop-tablet-w-porc100 ',
+                                                            attr:{
+                                                                onClick:"navigate.goto('tela05-pessoal')"
+                                                            },
+                                                            content: [
+                                                                {
+                                                                type: 'subtext',
+                                                                resource: {
+                                                                    content: 'Clique para acessar os projetos',
+                                                                    class: 'color-01 prop-txt-bold prop-p1'
+                                                                }
+                                                                },
+
+                                                            ]
+                                                            }
+                                                },
+                                                    ]
+                                                  }
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            fraction: 'minor',
+                                            content: [
+                                                {
+                                                    type: 'image',
+                                                    resource: {
+                                                        classContainer: 'util-image-center',
+                                                        src: 'icon_05.gif',
+                                                        class: ' prop-w-porc60 prop-mt1',
+                                                        alt: ''
+                                                    }
+                                                },
+                                            ]
+                                        },
+                                    ]
+                                },
+                            ]
+                        },
+                    ]
+                })
+
+
+
+
+block scripts
+    script(src="script.js")

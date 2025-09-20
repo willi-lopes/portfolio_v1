@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="809" height="809" viewBox="0 0 809 809">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: #a9a9a9;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+
+      .cls-4 {
+        filter: url(#filter-4);
+      }
+
+      .cls-5 {
+        filter: url(#filter-5);
+      }
+
+      .cls-6 {
+        filter: url(#filter-6);
+      }
+
+      .cls-7 {
+        filter: url(#filter-7);
+      }
+
+      .cls-8 {
+        filter: url(#filter-8);
+      }
+    </style>
+    <filter id="filter" x="-5" y="-2" width="201" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="613" y="-2" width="201" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="407" y="-2" width="201" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="199" y="203" width="205" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-5" x="609" y="205" width="205" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-6" x="199" y="410" width="205" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-7" x="407" y="410" width="205" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-8" x="609" y="615" width="205" height="202" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="4" dy="6.928" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-opacity="0.25"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect id="Retângulo_Arredondado_1" data-name="Retângulo Arredondado 1" class="cls-1" width="182" height="183" rx="20" ry="20"/>
+  <rect id="Retângulo_Arredondado_1-2" data-name="Retângulo Arredondado 1" class="cls-2" x="618" width="182" height="183" rx="20" ry="20"/>
+  <rect id="Retângulo_Arredondado_1-3" data-name="Retângulo Arredondado 1" class="cls-3" x="412" width="182" height="183" rx="20" ry="20"/>
+  <rect id="Retângulo_Arredondado_1-4" data-name="Retângulo Arredondado 1" class="cls-4" x="204" y="205" width="186" height="183" rx="20" ry="20"/>
+  <rect id="Retângulo_Arredondado_1-5" data-name="Retângulo Arredondado 1" class="cls-5" x="614" y="207" width="186" height="183" rx="20" ry="20"/>
+  <rect id="Retângulo_Arredondado_1-6" data-name="Retângulo Arredondado 1" class="cls-6" x="204" y="412" width="186" height="183" rx="20" ry="20"/>
+  <rect id="Retângulo_Arredondado_1-7" data-name="Retângulo Arredondado 1" class="cls-7" x="412" y="412" width="186" height="183" rx="20" ry="20"/>
+  <rect id="Retângulo_Arredondado_1-8" data-name="Retângulo Arredondado 1" class="cls-8" x="614" y="617" width="186" height="183" rx="20" ry="20"/>
+</svg>

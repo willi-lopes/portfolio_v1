@@ -1,0 +1,93 @@
+*[draggable="true"] {
+  user-select: none;
+  -khtml-user-drag: element;
+  cursor: move;
+}
+
+*:-khtml-drag {
+  background-color: rgba(238, 238, 238, 0.1);
+  overflow: hidden;
+}
+
+.exercise-drag-drop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .colunas {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .coluna {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 45%;
+
+      @media (max-width: @tablet) {
+        width: 100%;
+      }
+
+      .container-item,
+      .container-alvo {
+        position: relative;
+        width: 100%;
+      }
+
+      .item-select {
+        position: relative;
+        width: 100%;
+        height: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.15rem solid black;
+        cursor: pointer;
+      }
+
+      .alvo-select {
+        position: relative;
+        width: 100%;
+        height: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.15rem solid black;
+      }
+
+      .featuredItens {
+        border: 0.15rem solid red;
+      }
+    }
+  }
+
+  .cloneItens {
+    opacity: 0.15;
+    pointer-events: none;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE */
+  }
+
+  .footer {
+    .container-btn {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .confirmar {
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+mixin interaction-timeline(template)
+    - _acessib_count=1;
+    .container-timeline(class!=template.class)
+        .cont-itens(class!=template.model)
+            each item in template.content
+                .cont-item(class=item.direction)
+                    .cont-element.container-image
+                        - var filename = (item.image.src.indexOf('http') != -1) ? item.image.src : "../../assets/img/"+item.image.src;
+                        - var classes = (item.image.class) ? item.image.class : '';
+                        - var alt = (item.image.ariaLabel ? item.image.ariaLabel : '' )
+                        - var tabindex = (item.image.ariaLabel ? _acessib_count++ : '' )
+                        img(src=filename, class!=classes, alt=alt, aria-label=alt, tabindex=tabindex )&attributes((item.image.attr) ? item.image.attr : '')
+                    .linha
+                    .cont-element.container-text
+                        p.wrapper-text(tabindex=_acessib_count++, class!=item.text.class)&attributes((item.text.attr) ? item.text.attr : '')!=item.text.content

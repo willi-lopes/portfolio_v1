@@ -1,0 +1,33 @@
+.row-wrap {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  .col {
+    position: relative;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    @media screen and (max-width: @tablet) {
+        width: 100%;
+    }
+
+    &.col-full{
+        width: 100%;
+    }
+
+    &.col-wide{
+      position: relative;
+      width:100%;
+      justify-content:center;
+    
+      .wrapper {
+          width: 100%;
+          padding:0;
+      }
+    }
+  }
+}

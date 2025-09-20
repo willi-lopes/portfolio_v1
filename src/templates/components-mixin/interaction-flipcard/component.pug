@@ -1,0 +1,40 @@
+mixin interaction-flipcard(container)
+  - var _classModel = "";
+  - var _classEvent = 'flip-hover';
+  - var _class = "";
+
+  if ( container.model )
+    if ( container.model == 'vertical' )
+      - _classModel = "flip-vertical";
+
+  if ( container.event )
+    if ( container.event == 'click' )
+      - _classEvent = "flip-click";
+
+  - _class = container.class + ' ' + _classModel + ' ' + _classEvent;
+
+
+  .container-item-flipcard(class!=_class)
+    - var front_class = "";
+    - var back_class = "";
+    - var front_bg = "";
+    - var back_bg = "";
+
+    each elem in container.front
+      if (elem.type == "class")
+        - front_class = elem.resource;
+      if (elem.type == "background")
+        - var col_bg_url = '../../assets/img/' + elem.resource.src;
+        - front_bg = `background-image: url(${col_bg_url});`;
+
+    each elem in container.back
+      if (elem.type == "class")
+        - back_class = elem.resource;
+      if (elem.type == "background")
+        - var col_bg_url = '../../assets/img/' + elem.resource.src;
+        - back_bg = `background-image: url(${col_bg_url});`;
+
+    .flipSide.front(style!=front_bg,class!=front_class)
+      +control-elements(container.front)
+    .flipSide.back(style!=back_bg,class!=back_class)
+      +control-elements(container.back)

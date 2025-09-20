@@ -1,0 +1,41 @@
+mixin exercise-memory-card(template)
+
+  - var id = (template.id) ? template.id : false;
+  - var random = (template.random) ? template.random : false;
+  - var cache = (template.cache) ? template.cache : false;
+  - var nextLiberate = (template.nextLiberate) ? template.nextLiberate : false;
+
+  .exercise-memory( id!=id, aria-hidden='true', random!=random, cache!=cache, nextLiberate!=nextLiberate)
+    each content in template.cards
+      .card(data-pair=content.key)
+        - var style_bg = '';
+          each elem in content.cardFront
+            if (elem.type == "background")
+              - var col_bg_url = '../../assets/img/' + elem.resource.src;
+              - style_bg = `background-image: url(${col_bg_url});`;
+        .front(class!=content.class, style!=style_bg)
+          +control-elements(content.cardFront)
+        - var style_bg = '';
+          each elem in content.cardContent
+            if (elem.type == "background")
+              - var col_bg_url = '../../assets/img/' + elem.resource.src;
+              - style_bg = `background-image: url(${col_bg_url});`;
+        .back(class!=content.class, style!=style_bg)
+          +control-elements(content.cardContent)
+
+    each content in template.pares
+      .card(data-pair=content.key)
+        - var style_bg = '';
+          each elem in content.cardFront
+            if (elem.type == "background")
+              - var col_bg_url = '../../assets/img/' + elem.resource.src;
+              - style_bg = `background-image: url(${col_bg_url});`;
+        .front(class!=content.class, style!=style_bg)
+          +control-elements(content.cardFront)
+        - var style_bg = '';
+          each elem in content.cardContent
+            if (elem.type == "background")
+              - var col_bg_url = '../../assets/img/' + elem.resource.src;
+              - style_bg = `background-image: url(${col_bg_url});`;
+        .back(class!=content.class, style!=style_bg)
+          +control-elements(content.cardContent)

@@ -1,0 +1,15 @@
+mixin interaction-progress-line(info)
+  - var scroll = null;
+
+  if (info)
+    if (info.scroll)
+      - scroll = info.scroll;
+    if (info.trailMap)
+      - map = info.trailMap;
+    if(info.autoCompleted)
+      - completed = info.autoCompleted;
+    if(info.realProgrees)
+      - progressMap = info.realProgrees;
+
+  .progress-line(scrollLine!=scroll, trailMap!=map, autoCompleted!=completed, realProgrees!=progressMap)
+    .progress-line-porcentagem

@@ -1,0 +1,337 @@
+extends ../../templates/page/page-base.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    body(prev-hide, next-hide, header-hide)
+        .bg_01
+        .onePage 
+
+
+
+
+            section.sec01.bg_02
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+
+                    columns:[
+
+                        {
+                            type: 'wide',
+                            col:[
+                                {
+                                    type: 'class',
+                                    resource: ''
+                                },
+
+                                                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: 'util-image-center',
+                                    src: 'bg_titulo.png',
+                                    class: ' media_01',
+                                    alt: ''
+                                  }
+                                },
+
+
+                            ]
+                        },
+
+                    ]
+                })
+
+
+
+
+
+            section.sec02
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+                                {
+                                  type: 'title',
+                                  resource: {
+                                    content: 'Apresentações & Materiais Interativos',
+                                    class: 'color-01'
+                                  }
+                                },
+
+                                {
+                                  type: 'image',
+                                  resource: {
+                                    classContainer: '',
+                                    src: 'risca_01.png',
+                                    class: 'prop-w-porc40 prop-tablet-w-porc90',
+                                    alt: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Design para mídias estáticas: desenvolvimento de PDFs interativos e apresentações em PowerPoint com aplicação de brand guides e identidades customizadas.',
+                                    class: ''
+                                  }
+                                },
+
+
+                                {
+                                  type: 'subtitle',
+                                  resource: {
+                                    content: 'Itaú Social (Parceria Direta)',
+                                    class: 'color-02 prop-pt3'
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Após o término do contrato com a Affero Lab (empresa onde atuei durante o período do Núcleo), o <b>Itaú Social</b> me procurou para um novo projeto, reconhecendo minha capacidade e expertise em entregas de grande escala. Fui apresentado ao projeto NAAPA, onde produzi, além de 4 módulos em HTML, mais seis PDFs interativos. Seguem alguns exemplos:',
+                                    class: ''
+                                  }
+                                },
+                                {
+                                  type: 'text',
+                                  resource: {
+                                    content: 'Toda a identidade visual deste projeto foi criada praticamente do zero.',
+                                    class: ''
+                                  }
+                                },
+                                
+                                                               
+                            ]
+                        },
+                    ]
+                })
+
+            .container
+
+              .image-grid-component(data-grid-id="grid1")
+                //- Imagem em destaque
+                .featured-image-container
+                  .featured-image
+                    img.featured-img(src="../../assets/img/img_06.jpg" alt="Imagem em destaque")
+                  .image-info
+                    h3#image-title PDF interativo diagramado
+                    p#image-desc.color-white Menu interativo
+
+                //- Grid de miniaturas
+                .thumbnail-grid
+                  .thumbnail.active(data-index="0"  data-desc="Menu interativo" data-ratio="1.5")
+                    img(src="../../assets/img/img_06.jpg" alt="Miniatura 1")
+                  .thumbnail(data-index="1"  data-desc="Exemplo de tela diagramada" data-ratio="0.67")
+                    img(src="../../assets/img/img_07.jpg" alt="Miniatura 2")
+                  .thumbnail(data-index="2"  data-desc="Infográfico sobre o Trabalho das Mães Guardiãs" data-ratio="1.5")
+                    img(src="../../assets/img/img_08.jpg" alt="Miniatura 3")
+                  .thumbnail(data-index="3"  data-desc="Infográfico Fluxo de Ações" data-ratio="1.5")
+                    img(src="../../assets/img/img_09.jpg" alt="Miniatura 4")
+                  .thumbnail(data-index="4"  data-desc="Exemplo de tela diagramada" data-ratio="1.5")
+                    img(src="../../assets/img/img_10.png" alt="Miniatura 5") 
+                  .thumbnail(data-index="5"  data-desc="Infográfico" data-ratio="0.67")
+                    img(src="../../assets/img/img_11.png" alt="Miniatura 6")
+
+
+
+            section.risco 
+              +template-wildcard({
+                bg: '',
+                video: '',
+                class: '',
+                columns: [
+                  {
+                    col:[
+                      {
+                        type: 'class',
+                        resource: 'prop-flex-align-center prop-txt-center'
+                      },
+                          {
+                              type: 'image',
+                              resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'risco_02.png',
+                                  class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                  alt: ''
+                              }
+                          },
+                    ],
+                  }
+                ]
+              })
+
+
+            section.sec03
+                +template-wildcard({
+                  bg: '',
+                  video: '',
+                  class: '',
+                  columns: [
+                    {
+                      type: '',
+                      col:[
+                        {
+                          type: 'class',
+                          resource: 'prop-flex-align-center'
+                        },
+                        
+                          {
+                            type: 'subtitle',
+                            resource: {
+                              content: 'Itaú',
+                              class: 'color-02 prop-pt3'
+                            }
+                          },
+                          {
+                            type: 'text',
+                            resource: {
+                              content: 'Apresentação para o <b>Itaú</b>, com a temática de Herry Potter.',
+                              class: ''
+                            }
+                          },
+              
+                      ],
+                    },
+
+                  ]
+                })
+            .container
+
+              .image-grid-component(data-grid-id="grid2")
+                //- Imagem em destaque
+                .featured-image-container
+                  .featured-image
+                    img.featured-img(src="../../assets/img/img_12.jpg" alt="Imagem em destaque")
+                  .image-info
+                    h3#image-title Apresentação
+                    
+
+                //- Grid de miniaturas
+                .thumbnail-grid
+                  .thumbnail.active(data-index="0"  data-desc="Menu interativo" data-ratio="1.5")
+                    img(src="../../assets/img/img_12.jpg" alt="Miniatura 1")
+                  .thumbnail(data-index="1"  data-desc="Exemplo de tela diagramada" data-ratio="0.67")
+                    img(src="../../assets/img/img_13.jpg" alt="Miniatura 2")
+                  .thumbnail(data-index="2"  data-desc="Infográfico sobre o Trabalho das Mães Guardiãs" data-ratio="1.5")
+                    img(src="../../assets/img/img_14.jpg" alt="Miniatura 3")
+                  .thumbnail(data-index="3"  data-desc="Infográfico Fluxo de Ações" data-ratio="1.5")
+                    img(src="../../assets/img/img_15.jpg" alt="Miniatura 4")
+
+            section.risco 
+              +template-wildcard({
+                bg: '',
+                video: '',
+                class: '',
+                columns: [
+                  {
+                    col:[
+                      {
+                        type: 'class',
+                        resource: 'prop-flex-align-center prop-txt-center'
+                      },
+                          {
+                              type: 'image',
+                              resource: {
+                                  classContainer: 'util-image-center',
+                                  src: 'risco_02.png',
+                                  class: 'prop-w-porc90 prop-mt5 prop-mb5',
+                                  alt: ''
+                              }
+                          },
+                    ],
+                  }
+                ]
+              })
+
+
+
+            section.sec04
+                +template-wildcard({
+                    bg: '',
+                    class: '',
+                    columns:[
+
+                        {
+                            type: '',
+                            col:[
+                                {
+                                  type: 'subtitle',
+                                  resource: {
+                                    content: 'Os mais variados clientes...',
+                                    class: 'color-02'
+                                  }
+                                }, 
+                            ]
+                        },
+
+
+                    ]
+                })
+
+            .container
+
+              .image-grid-component(data-grid-id="grid16")
+                .featured-image-container
+                  .featured-image
+                    img.featured-img(src="../../assets/img/img_16.jpg" alt="Imagem em destaque")
+                 
+
+                .thumbnail-grid
+                  - for (let i = 16; i <= 31; i++)
+                    .thumbnail(
+                      data-index=i-16,
+                      data-title=`Imagem ${i}`,
+                      data-desc=`Descrição da imagem ${i}`
+                      class=i === 16 ? 'active' : ''
+                    )
+                      img(src=`../../assets/img/img_${i}.jpg` alt=`Miniatura ${i-15}`)
+
+
+
+            section.sec03
+                +template-wildcard({
+                  bg: '',
+                  video: '',
+                  class: '',
+                  columns: [
+                    {
+                      col:[
+                        {
+                          type: 'class',
+                          resource: 'prop-flex-align-center prop-txt-center'
+                        },
+                        {
+                                    type: 'button',
+                                    resource: {
+                                    alt: 'button',
+                                    class: 'btn01 prop-w-porc20 prop-tablet-w-porc40 prop-m5 ',
+                                    attr:{
+                                        onClick:"navigate.goto('tela01-index')"
+                                    },
+                                    content: [
+                                        {
+                                        type: 'subtext',
+                                        resource: {
+                                            content: 'Voltar',
+                                            class: 'color-01 prop-txt-bold prop-p1'
+                                        }
+                                        },
+
+                                    ]
+                                    }
+                            },
+                      ],
+                    }
+                  ]
+                })
+
+           
+            
+
+
+block scripts
+    script(src="script.js")

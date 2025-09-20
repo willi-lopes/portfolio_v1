@@ -1,0 +1,48 @@
+mixin interaction-slides(container)
+
+  - var idSlide =(container.idSlide) ? container.idSlide : '';
+  - var classSlider = (container.class) ? container.class : idSlide;
+  - var classSliderCurrent = "owl-carousel owl-theme parent-inside-col " + classSlider;
+
+  - var loop = ( container.loop ) ? container.loop : false;
+  - var next = ( container.nextLiberate ) ? container.nextLiberate : false;
+  - var navegacao = ( container.nav ) ? container.nav : true;
+  - var dotsNav = ( container.dots ) ? container.dots : true;
+  - var centerItem = ( container.center ) ? container.center : true;
+  - var auto = ( container.autoplay ) ? container.autoplay : false;
+  - var dotsloader = ( container.dotsloader ) ? container.dotsloader : false;
+
+  - var _infinite =  ( loop == false ) ? -1 : 1;
+  - var _nextLiberate =  ( next == false ) ? -1 : 1;
+  - var _nav =  ( navegacao == false ) ? -1 : 1;
+  - var _dots =  ( dotsNav == false ) ? -1 : 1;
+  - var _center =  ( centerItem == false ) ? -1 : 1;
+  - var _autoplay =  ( auto == false ) ? -1 : 1;
+  - var _dotsloader =  ( dotsloader == false ) ? -1 : 1;
+
+  .slider(class!=classSliderCurrent,
+          show!=container.show,
+          bgSliderContainerClass!=container.bgSliderContainerClass,
+          infinite!=_infinite,
+          nextLiberate!=_nextLiberate,
+          nav!=_nav,
+          dots!=_dots,
+          center!=_center,
+          autp!=_autoplay,
+          dotsloader!=_dotsloader,
+          margin!=container.margin,
+          )&attributes((container.attr) ? container.attr : '')
+    each slide in container.slides
+      .owl-item-container
+        +control-wildcard(slide)
+
+    if(container.bgSliderContainerClass)
+      .bgSlideContainer
+        each slide, i in container.slides
+          - var filename = (slide.bgSlide.src.indexOf('/') != -1) ? slide.bgSlide.src : "../../assets/img/"+slide.bgSlide.src;
+          - var classes = (slide.bgSlide.class) ? slide.bgSlide.class : '';
+          - var alt = (slide.bgSlide.alt ? slide.bgSlide.alt : '' );
+          - var tabindex = (slide.bgSlide.alt ? acessib_count++ : -1 );
+          - var ariaHidden = (!slide.bgSlide.alt) ? true : false;
+          - var classesBg = "slideImg slideImg" + i + " " + classes;
+          img(src=filename, class!=classesBg, alt=alt, aria-label=alt, tabindex=tabindex, aria-hidden=ariaHidden )&attributes((slide.bgSlide.attr) ? slide.bgSlide.attr : '')

@@ -1,0 +1,204 @@
+.exercise-grid-puzzles {
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 1rem;
+    box-shadow: inset -1rem -2rem 2rem -1.5rem rgba(0, 0, 0, 0.5);
+    &::-webkit-scrollbar {
+        width: .5rem;
+        height: .5rem; /* A altura só é vista quando a rolagem é horizontal */
+    }   
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        padding: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: @color-01;
+    }
+    .boxgrid {
+        width: fit-content;
+        display: flex;
+        
+        @media (max-width:@tablet) {
+            flex-direction: column;
+        }
+
+        .grid-puzzles {
+            display: grid;
+            gap: .2rem;
+            grid-template-areas:
+                "0 0 a a"
+                "0 0 a a"
+                "b b c c"
+                "b b c c";
+            
+            @media (max-width:@tablet) {
+                grid-template-areas:
+                "0 0 b b"
+                "0 0 b b"
+                "a a c c"
+                "a a c c";
+            }
+
+            .boxCol {
+                grid-area: a;
+                background-color: @color-05;
+                border: solid .2rem @color-01;
+                @media (max-width:@tablet) {
+                    display: flex;
+                }
+                .title {
+                    background-color: @color-01;
+                    width: 100%;
+                    height: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    p {
+                        color: white;
+                    }
+                    @media (max-width:@tablet) {
+                        width: 2rem;
+                        height: auto;
+                        p {
+                            transform: rotate(270deg);
+                        }
+                    }
+                }
+
+                .flexItens {
+                    display: flex;
+                    .item {
+                        background-color: @color-06;
+                        width: -webkit-fill-available;
+                        height: 10rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        p {
+                            color: white;
+                            transform: rotate(270deg);
+                        }
+                    }
+                    @media (max-width:@tablet) {
+                        flex-direction: column;
+                        .item {
+                            width: 10rem;
+                            height: 5rem;
+                            p {
+                                transform: rotate(0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .boxRow {
+                border: solid .2rem @color-01;
+                grid-area: b;
+                width: 12rem;
+                height: auto;
+                display: flex;
+                @media (max-width:@tablet) {
+                    width: auto;
+                    height: 12rem;
+                    flex-direction: column;
+                }
+                .title {
+                    background-color: @color-02;
+                    width: 2rem;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    p {
+                        color: white;
+                        transform: rotate(270deg);
+                    }
+                    @media (max-width:@tablet) {
+                        width: auto;
+                        height: 2rem;
+                        p {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                .flexItens {
+                    width: -webkit-fill-available;
+                    display: flex;
+                    flex-direction: column;
+                    @media (max-width:@tablet) {
+                        flex-direction: row;
+                        height: -webkit-fill-available;
+                    }
+                    .item {
+                        background-color: @color-04;
+                        width: 100%;
+                        height: 5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @media (max-width:@tablet) {
+                            width: 5rem;
+                            height: -webkit-fill-available;
+                        }
+                        p {
+                            color: white;
+                            @media (max-width:@tablet) {
+                                transform: rotate(270deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .boxClick {
+                border: solid .2rem @color-01;
+                grid-area: c;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .cell {
+                    width: 5rem;
+                    height: 5rem;
+                    border: solid .1rem #ccc;
+                    direction: rtl;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    &.neg {
+                        // background-color: #db8383;
+                    }
+                    &.pos {
+                        // background-color: #5ed490;
+                    }
+                }
+            }
+        }
+
+        .grid-puzzles + .grid-puzzles {
+            margin: 0 0 0 -.2rem;
+            @media (max-width:@tablet) {
+                margin: -.2rem 0 0;
+            }
+            .boxRow {
+                display: none;
+            }
+        }
+    }
+
+    .flexButtons {
+        margin: .5rem 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        button {
+            cursor: pointer;
+        }
+    }
+}
